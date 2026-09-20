@@ -13,6 +13,10 @@ base {
     archivesName = mod_id
 }
 
+def gitHash = providers.exec {
+    commandLine 'git', 'rev-parse', '--short=7', 'HEAD'
+}.standardOutput.asText.map { it.trim() }
+
 // Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
@@ -168,6 +172,7 @@ tasks.named('processResources', ProcessResources).configure {
 
 // Example for how to get properties into the manifest for reading at runtime.
 tasks.named('jar', Jar).configure {
+    archiveFileName = gitHash.map { "${mod_id}-${it}-${minecraft_version}.jar" }
     from(files('LICENSE', 'NOTICE')) {
         into 'META-INF'
     }
