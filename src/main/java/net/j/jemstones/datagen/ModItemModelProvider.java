@@ -20,6 +20,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.ROX);
         simpleItem(ModItems.MOSHLING_EGG);
 
+        simpleItem(ModItems.ACTIVATED_GEM_SHARD);
+        simpleItem(ModItems.ACTIVATED_GEM_BASE);
+        simpleItem(ModItems.INACTIVE_GEM_BASE);
+
         ResourceLocation parent = new ResourceLocation("item/generated");
         getBuilder("love_berries")
                 .parent(new net.minecraftforge.client.model.generators.ModelFile.ExistingModelFile(parent, existingFileHelper))

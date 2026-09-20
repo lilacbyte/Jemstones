@@ -10,8 +10,6 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
-import java.awt.*;
-
 public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Jemstones.MOD_ID);
@@ -22,6 +20,9 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.MOSHLING_EGG.get());
                         output.accept(ModItems.ROX.get());
+                        output.accept(ModItems.ACTIVATED_GEM_SHARD.get());
+                        output.accept(ModItems.ACTIVATED_GEM_BASE.get());
+                        output.accept(ModItems.INACTIVE_GEM_BASE.get());
                         output.accept(ModBlocks.ROX_BLOCK.get());
                         output.accept(ModBlocks.ROX_ORE.get());
                         output.accept(ModBlocks.DEEPSLATE_ROX_ORE.get());

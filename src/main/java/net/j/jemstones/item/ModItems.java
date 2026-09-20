@@ -16,6 +16,14 @@ public class ModItems {
     public static final RegistryObject<Item>  ROX = ITEMS.register("rox",
             () -> new Item(new Item.Properties()));
 
+    // behaviour comes later
+    public static final RegistryObject<Item> ACTIVATED_GEM_SHARD = ITEMS.register("active_gem_shard",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ACTIVATED_GEM_BASE = ITEMS.register("active_gem_base",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> INACTIVE_GEM_BASE = ITEMS.register("inactive_gem_base",
+            () -> new Item(new Item.Properties()));
+
     public static void register(IEventBus eventBus) {
      ITEMS.register(eventBus);
     }

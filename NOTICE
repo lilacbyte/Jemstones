@@ -1,0 +1,12 @@
+Jemstones includes item definitions, models, textures and English item names
+adapted from KAGIC (https://github.com/kagic/KAGIC).
+
+Upstream attribution from KAGIC's README:
+"KAGIC" source code and its derivatives, including bytecode and executables, are licensed under an GNU Public License v3 by "The KAGIC Team" ("akrivus", "HeimrArnadalr", "Judacraz", "Lattie", "obsidian29", "Seartisian", "taaffeite", "Tourmaline-Iris").
+
+The GPL version 3 text is included in LICENSE. The imported item definitions
+have been adapted to Forge 1.20.1 and the jemstones namespace. Items are inert
+placeholders; upstream gameplay has not been imported. Item textures are
+copied unchanged, and model texture references and language keys are adapted.
+
+"Steven Universe" and all related characters and elements are trademarks of Cartoon Network.

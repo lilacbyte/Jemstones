@@ -1,13 +1,14 @@
 {
   "item.jemstones.moshling_egg": "Moshling Egg",
   "item.jemstones.rox": "Rox",
-
   "block.jemstones.rox_block": "Block of Rox",
   "block.jemstones.rox_ore": "Rox Ore",
   "block.jemstones.deepslate_rox_ore": "Deepslate Rox Ore",
   "block.jemstones.tile": "Basic Tile",
   "block.jemstones.garden_soil": "Garden Soil",
   "block.jemstones.love_berries": "Love Berries",
-
-  "creativetab.jemstones_tab": "Jemstones"
+  "creativetab.jemstones_tab": "Jemstones",
+  "item.jemstones.active_gem_shard": "Active Gem Shard",
+  "item.jemstones.active_gem_base": "Active Gem Base",
+  "item.jemstones.inactive_gem_base": "Inactive Gem Base"
 }
