@@ -1,0 +1,4 @@
+// 1.20.1	2025-05-28T18:38:36.6049119	Tags for minecraft:block mod id jemstones
+03aaacf549e6d1a06035a91194674747e1224eb4 data/minecraft/tags/blocks/mineable/pickaxe.json
+e7b322a05af402f790738411ab76889e92bfad88 data/minecraft/tags/blocks/mineable/shovel.json
+03aaacf549e6d1a06035a91194674747e1224eb4 data/minecraft/tags/blocks/needs_iron_tool.json

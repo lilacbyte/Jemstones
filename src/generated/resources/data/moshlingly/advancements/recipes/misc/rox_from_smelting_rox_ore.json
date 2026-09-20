@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rox_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "jemstones:rox_ore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "jemstones:rox_from_smelting_rox_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_rox_ore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "jemstones:rox_from_smelting_rox_ore"
+    ]
+  },
+  "sends_telemetry_event": false
+}

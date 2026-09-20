@@ -1,0 +1,18 @@
+// 1.20.1	2025-05-30T15:31:14.0145599	Block States: jemstones
+75d8559f3706b1f6a0dc3f95d096d89348ae3f97 assets/jemstones/blockstates/deepslate_rox_ore.json
+f79cc6f48b964b468a9954b90ed2fbc90c005f6b assets/jemstones/blockstates/garden_soil.json
+a9d4dcb7bcb27aaece7dff29ed18b9493b84b93a assets/jemstones/blockstates/love_berries.json
+70121345e55fbb4b20e10b5c8f0fb00c266cd334 assets/jemstones/blockstates/rox_block.json
+71f0eb336495d185e154595c2302e43107b78dd1 assets/jemstones/blockstates/rox_ore.json
+65e88ac15c0b143bbc758dd0076da49ffe832128 assets/jemstones/blockstates/tile.json
+d17604284c55c0bcc642180874b6e815411b40ec assets/jemstones/models/block/deepslate_rox_ore.json
+6c336e4599391d5219db0a75e20a40ee4849f3a1 assets/jemstones/models/block/garden_soil.json
+a6002cda49cb12010909b9153a813173f7b4d3d1 assets/jemstones/models/block/love_berries.json
+4ab2a73f31e4586b7082345b9372afff2f4c43cb assets/jemstones/models/block/rox_block.json
+55c781e40bf99a40e14e9842cc77d368aa0291b6 assets/jemstones/models/block/rox_ore.json
+2c264febf60501bf4c2942af1313695dd5cf8106 assets/jemstones/models/block/tile.json
+33429417dddc8549889b2033f0f1f947d4792260 assets/jemstones/models/item/deepslate_rox_ore.json
+ae728f32b298c33226228ad5b8d35428e39928b6 assets/jemstones/models/item/garden_soil.json
+0283ba7c4f55a8595ea9f43a62a1b9426a42742f assets/jemstones/models/item/rox_block.json
+cf8901c6be39b074244a75266bc3d6fe0a397224 assets/jemstones/models/item/rox_ore.json
+4e7c20cf6c5d9cfe66a054abee3bbf8ae60c27c0 assets/jemstones/models/item/tile.json
