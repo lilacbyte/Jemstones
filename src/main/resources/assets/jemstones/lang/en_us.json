@@ -2,5 +2,6 @@
   "creativetab.jemstones_tab": "Jemstones",
   "item.jemstones.active_gem_shard": "Active Gem Shard",
   "item.jemstones.active_gem_base": "Active Gem Base",
-  "item.jemstones.inactive_gem_base": "Inactive Gem Base"
+  "item.jemstones.inactive_gem_base": "Inactive Gem Base",
+  "entity.jemstones.ruby": "Ruby"
 }

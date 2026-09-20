@@ -2,6 +2,7 @@ package net.j.jemstones;
 
 import net.j.jemstones.item.ModCreativeModeTabs;
 import net.j.jemstones.item.ModItems;
+import net.j.jemstones.entity.ModEntities;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -14,5 +15,6 @@ public class Jemstones {
         IEventBus modEventBus = context.getModEventBus();
         ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
+        ModEntities.register(modEventBus);
     }
 }
