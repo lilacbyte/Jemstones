@@ -11,11 +11,6 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, Jemstones.MOD_ID);
 
-    public static final RegistryObject<Item>  MOSHLING_EGG = ITEMS.register("moshling_egg",
-            () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item>  ROX = ITEMS.register("rox",
-            () -> new Item(new Item.Properties()));
-
     // behaviour comes later
     public static final RegistryObject<Item> ACTIVATED_GEM_SHARD = ITEMS.register("active_gem_shard",
             () -> new Item(new Item.Properties()));
@@ -25,6 +20,6 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
-     ITEMS.register(eventBus);
+        ITEMS.register(eventBus);
     }
 }
