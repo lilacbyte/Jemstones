@@ -6,7 +6,8 @@ Upstream attribution from KAGIC's README:
 
 The GPL version 3 text is included in LICENSE. The imported code has been adapted to Forge 1.20.1 and the jemstones namespace.
 Ruby currently has basic movement, combat and ownership with one fixed original
-appearance. Fusion, jobs and the full gem lifecycle are not yet ported.
+appearance. The Ruby Gem item summons an owned Ruby. Fusion, jobs and the
+full gem lifecycle are not yet ported.
 Textures are copied unchanged. Models, resource references and language keys
 are adapted; Ruby limb pivots are adjusted for the new model API.
 Ruby voice sounds are unavailable in the upstream checkout used for this port.

@@ -17,6 +17,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+        simpleItem(ModItems.RUBY_GEM);
         simpleItem(ModItems.ACTIVATED_GEM_SHARD);
         simpleItem(ModItems.ACTIVATED_GEM_BASE);
         simpleItem(ModItems.INACTIVE_GEM_BASE);

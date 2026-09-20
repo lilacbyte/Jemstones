@@ -17,6 +17,14 @@ public class RubyModel extends HumanoidModel<Ruby> {
         super(root);
     }
 
+    @Override
+    public void setupAnim(Ruby ruby, float limbSwing, float limbAmount, float age, float headYaw, float headPitch) {
+        super.setupAnim(ruby, limbSwing, limbAmount, age, headYaw, headPitch);
+        // vanilla animation resets these to human proportions
+        rightArm.y = leftArm.y = 8.0F;
+        rightLeg.y = leftLeg.y = 16.0F;
+    }
+
     public static LayerDefinition createBodyLayer() {
         MeshDefinition mesh = HumanoidModel.createMesh(CubeDeformation.NONE, 0.0F);
         PartDefinition root = mesh.getRoot();

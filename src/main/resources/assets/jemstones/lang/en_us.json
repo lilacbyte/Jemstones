@@ -3,5 +3,6 @@
   "item.jemstones.active_gem_shard": "Active Gem Shard",
   "item.jemstones.active_gem_base": "Active Gem Base",
   "item.jemstones.inactive_gem_base": "Inactive Gem Base",
-  "entity.jemstones.ruby": "Ruby"
+  "entity.jemstones.ruby": "Ruby",
+  "item.jemstones.ruby_gem": "Ruby Gem"
 }

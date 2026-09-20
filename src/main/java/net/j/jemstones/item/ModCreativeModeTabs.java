@@ -17,6 +17,7 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.ACTIVATED_GEM_SHARD.get()))
                     .title(Component.translatable("creativetab.jemstones_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModItems.RUBY_GEM.get());
                         output.accept(ModItems.ACTIVATED_GEM_SHARD.get());
                         output.accept(ModItems.ACTIVATED_GEM_BASE.get());
                         output.accept(ModItems.INACTIVE_GEM_BASE.get());

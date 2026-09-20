@@ -11,6 +11,9 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, Jemstones.MOD_ID);
 
+    public static final RegistryObject<Item> RUBY_GEM = ITEMS.register("ruby_gem",
+            () -> new RubyGemItem(new Item.Properties().stacksTo(1)));
+
     // behaviour comes later
     public static final RegistryObject<Item> ACTIVATED_GEM_SHARD = ITEMS.register("active_gem_shard",
             () -> new Item(new Item.Properties()));
