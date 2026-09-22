@@ -1,5 +1,6 @@
 package net.j.jemstones;
 
+import net.j.jemstones.block.ModBlocks;
 import net.j.jemstones.item.ModCreativeModeTabs;
 import net.j.jemstones.item.ModItems;
 import net.j.jemstones.entity.ModEntities;
@@ -15,6 +16,7 @@ public class Jemstones {
         IEventBus modEventBus = context.getModEventBus();
         ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
         ModEntities.register(modEventBus);
     }
 }

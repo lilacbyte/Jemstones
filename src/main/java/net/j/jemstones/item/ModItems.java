@@ -1,6 +1,8 @@
 package net.j.jemstones.item;
 
 import net.j.jemstones.Jemstones;
+import net.j.jemstones.block.ModBlocks;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -13,6 +15,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> RUBY_GEM = ITEMS.register("ruby_gem",
             () -> new RubyGemItem(new Item.Properties().stacksTo(1)));
+
+    public static final RegistryObject<Item> MOON_BLESSED_STONE = ITEMS.register("moon_blessed_stone",
+            () -> new BlockItem(ModBlocks.MOON_BLESSED_STONE.get(), new Item.Properties()));
 
     // behaviour comes later
     public static final RegistryObject<Item> ACTIVATED_GEM_SHARD = ITEMS.register("active_gem_shard",
