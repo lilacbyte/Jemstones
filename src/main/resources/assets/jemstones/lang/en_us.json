@@ -5,5 +5,7 @@
   "item.jemstones.inactive_gem_base": "Inactive Gem Base",
   "entity.jemstones.ruby": "Ruby",
   "item.jemstones.ruby_gem": "Ruby Gem",
-  "block.jemstones.moon_blessed_stone": "Moon Blessed Stone"
+  "block.jemstones.moon_blessed_stone": "Moon Blessed Stone",
+  "block.jemstones.drained_block": "Drained Block",
+  "block.jemstones.drained_block_2": "Drained Block"
 }

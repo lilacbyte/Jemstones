@@ -22,6 +22,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.ACTIVATED_GEM_BASE.get());
                         output.accept(ModItems.INACTIVE_GEM_BASE.get());
                         output.accept(ModItems.MOON_BLESSED_STONE.get());
+                        output.accept(ModItems.DRAINED_BLOCK.get());
+                        output.accept(ModItems.DRAINED_BLOCK_2.get());
                     })
                     .build());
 

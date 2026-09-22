@@ -19,6 +19,12 @@ public class ModItems {
     public static final RegistryObject<Item> MOON_BLESSED_STONE = ITEMS.register("moon_blessed_stone",
             () -> new BlockItem(ModBlocks.MOON_BLESSED_STONE.get(), new Item.Properties()));
 
+    public static final RegistryObject<Item> DRAINED_BLOCK = ITEMS.register("drained_block",
+            () -> new BlockItem(ModBlocks.DRAINED_BLOCK.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> DRAINED_BLOCK_2 = ITEMS.register("drained_block_2",
+            () -> new BlockItem(ModBlocks.DRAINED_BLOCK_2.get(), new Item.Properties()));
+
     // behaviour comes later
     public static final RegistryObject<Item> ACTIVATED_GEM_SHARD = ITEMS.register("active_gem_shard",
             () -> new Item(new Item.Properties()));
