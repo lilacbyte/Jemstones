@@ -25,8 +25,11 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     @Override
     protected void generate() {
         dropSelf(ModBlocks.MOON_BLESSED_STONE.get());
-        dropSelf(ModBlocks.DRAINED_BLOCK_2.get());
         dropSelf(ModBlocks.DRAINED_BLOCK.get());
+        dropSelf(ModBlocks.DRAINED_BLOCK_2.get());
+        dropSelf(ModBlocks.DRAINED_BANDS.get());
+        dropSelf(ModBlocks.SMOOTH_CARBONITE.get());
+        dropSelf(ModBlocks.CHISELED_CARBONITE.get());
     }
 
     @Override

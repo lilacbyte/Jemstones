@@ -18,10 +18,18 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ModBlocks.MOON_BLESSED_STONE.get());
-        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ModBlocks.DRAINED_BLOCK_2.get());
-        tag(BlockTags.NEEDS_STONE_TOOL).add(ModBlocks.DRAINED_BLOCK_2.get());
-        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ModBlocks.DRAINED_BLOCK.get());
-        tag(BlockTags.NEEDS_STONE_TOOL).add(ModBlocks.DRAINED_BLOCK.get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
+                ModBlocks.MOON_BLESSED_STONE.get(),
+                ModBlocks.DRAINED_BLOCK.get(),
+                ModBlocks.DRAINED_BLOCK_2.get(),
+                ModBlocks.DRAINED_BANDS.get(),
+                ModBlocks.SMOOTH_CARBONITE.get(),
+                ModBlocks.CHISELED_CARBONITE.get());
+        tag(BlockTags.NEEDS_STONE_TOOL).add(
+                ModBlocks.DRAINED_BLOCK.get(),
+                ModBlocks.DRAINED_BLOCK_2.get(),
+                ModBlocks.DRAINED_BANDS.get(),
+                ModBlocks.SMOOTH_CARBONITE.get(),
+                ModBlocks.CHISELED_CARBONITE.get());
     }
 }

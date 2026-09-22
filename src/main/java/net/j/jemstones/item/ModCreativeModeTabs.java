@@ -24,6 +24,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.MOON_BLESSED_STONE.get());
                         output.accept(ModItems.DRAINED_BLOCK.get());
                         output.accept(ModItems.DRAINED_BLOCK_2.get());
+                        output.accept(ModItems.DRAINED_BANDS.get());
+                        output.accept(ModItems.SMOOTH_CARBONITE.get());
+                        output.accept(ModItems.CHISELED_CARBONITE.get());
                     })
                     .build());
 

@@ -1,7 +1,10 @@
 {
   "values": [
     "jemstones:moon_blessed_stone",
+    "jemstones:drained_block",
     "jemstones:drained_block_2",
-    "jemstones:drained_block"
+    "jemstones:drained_bands",
+    "jemstones:smooth_carbonite",
+    "jemstones:chiseled_carbonite"
   ]
 }

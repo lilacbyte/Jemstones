@@ -1,11 +1,11 @@
 package net.j.jemstones.block;
 
 import net.j.jemstones.Jemstones;
-import net.minecraft.world.level.material.MapColor;
-import net.minecraft.world.level.material.PushReaction;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -25,6 +25,18 @@ public class ModBlocks {
     public static final RegistryObject<Block> DRAINED_BLOCK_2 = BLOCKS.register("drained_block_2",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).mapColor(MapColor.COLOR_PURPLE)
                     .strength(40.0F, 0.6F).pushReaction(PushReaction.BLOCK)));
+
+    public static final RegistryObject<Block> DRAINED_BANDS = BLOCKS.register("drained_bands",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).mapColor(MapColor.COLOR_PURPLE)
+                    .strength(40.0F, 0.6F).pushReaction(PushReaction.BLOCK)));
+
+    public static final RegistryObject<Block> SMOOTH_CARBONITE = BLOCKS.register("smooth_carbonite",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).mapColor(MapColor.COLOR_PURPLE)
+                    .strength(80.0F, 1.2F).pushReaction(PushReaction.BLOCK)));
+
+    public static final RegistryObject<Block> CHISELED_CARBONITE = BLOCKS.register("chiseled_carbonite",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).mapColor(MapColor.COLOR_PURPLE)
+                    .strength(80.0F, 1.2F).pushReaction(PushReaction.BLOCK)));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
