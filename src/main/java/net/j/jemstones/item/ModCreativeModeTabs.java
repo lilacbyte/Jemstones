@@ -27,6 +27,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.DRAINED_BANDS.get());
                         output.accept(ModItems.SMOOTH_CARBONITE.get());
                         output.accept(ModItems.CHISELED_CARBONITE.get());
+                        output.accept(ModItems.PINK_SANDSTONE.get());
+                        output.accept(ModItems.PINK_SANDSTONE_STAIRS.get());
+                        output.accept(ModItems.PINK_SANDSTONE_SLAB.get());
                     })
                     .build());
 

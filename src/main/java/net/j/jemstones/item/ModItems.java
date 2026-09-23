@@ -34,6 +34,15 @@ public class ModItems {
     public static final RegistryObject<Item> CHISELED_CARBONITE = ITEMS.register("chiseled_carbonite",
             () -> new BlockItem(ModBlocks.CHISELED_CARBONITE.get(), new Item.Properties()));
 
+    public static final RegistryObject<Item> PINK_SANDSTONE = ITEMS.register("pink_sandstone",
+            () -> new BlockItem(ModBlocks.PINK_SANDSTONE.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> PINK_SANDSTONE_STAIRS = ITEMS.register("pink_sandstone_stairs",
+            () -> new BlockItem(ModBlocks.PINK_SANDSTONE_STAIRS.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> PINK_SANDSTONE_SLAB = ITEMS.register("pink_sandstone_slab",
+            () -> new BlockItem(ModBlocks.PINK_SANDSTONE_SLAB.get(), new Item.Properties()));
+
     // behaviour comes later
     public static final RegistryObject<Item> ACTIVATED_GEM_SHARD = ITEMS.register("active_gem_shard",
             () -> new Item(new Item.Properties()));

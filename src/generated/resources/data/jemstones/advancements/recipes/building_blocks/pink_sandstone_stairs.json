@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_pink_sandstone": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "jemstones:pink_sandstone"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "jemstones:pink_sandstone_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_pink_sandstone",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "jemstones:pink_sandstone_stairs"
+    ]
+  },
+  "sends_telemetry_event": false
+}

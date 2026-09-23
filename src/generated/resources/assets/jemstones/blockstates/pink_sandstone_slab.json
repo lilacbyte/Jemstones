@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "jemstones:block/pink_sandstone_slab"
+    },
+    "type=double": {
+      "model": "jemstones:block/pink_sandstone"
+    },
+    "type=top": {
+      "model": "jemstones:block/pink_sandstone_slab_top"
+    }
+  }
+}

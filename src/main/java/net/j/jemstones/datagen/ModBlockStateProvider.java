@@ -27,5 +27,15 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(ModBlocks.CHISELED_CARBONITE.get(), models().cubeColumn("chiseled_carbonite",
                 modLoc("block/chiseled_carbonite"), modLoc("block/smooth_carbonite"))
                 .texture("particle", modLoc("block/smooth_carbonite")));
+        simpleBlockWithItem(ModBlocks.PINK_SANDSTONE.get(), models().cubeBottomTop("pink_sandstone",
+                modLoc("block/pink_sandstone_normal"), modLoc("block/pink_sandstone_bottom"),
+                modLoc("block/pink_sandstone_top")));
+        stairsBlock(ModBlocks.PINK_SANDSTONE_STAIRS.get(), modLoc("block/pink_sandstone_normal"),
+                modLoc("block/pink_sandstone_bottom"), modLoc("block/pink_sandstone_top"));
+        simpleBlockItem(ModBlocks.PINK_SANDSTONE_STAIRS.get(), models().getExistingFile(modLoc("block/pink_sandstone_stairs")));
+        slabBlock(ModBlocks.PINK_SANDSTONE_SLAB.get(), modLoc("block/pink_sandstone"),
+                modLoc("block/pink_sandstone_normal"), modLoc("block/pink_sandstone_bottom"),
+                modLoc("block/pink_sandstone_top"));
+        simpleBlockItem(ModBlocks.PINK_SANDSTONE_SLAB.get(), models().getExistingFile(modLoc("block/pink_sandstone_slab")));
     }
 }

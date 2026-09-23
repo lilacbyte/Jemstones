@@ -25,6 +25,10 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.DRAINED_BANDS.get(),
                 ModBlocks.SMOOTH_CARBONITE.get(),
                 ModBlocks.CHISELED_CARBONITE.get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ModBlocks.PINK_SANDSTONE.get(),
+                ModBlocks.PINK_SANDSTONE_STAIRS.get(), ModBlocks.PINK_SANDSTONE_SLAB.get());
+        tag(BlockTags.STAIRS).add(ModBlocks.PINK_SANDSTONE_STAIRS.get());
+        tag(BlockTags.SLABS).add(ModBlocks.PINK_SANDSTONE_SLAB.get());
         tag(BlockTags.NEEDS_STONE_TOOL).add(
                 ModBlocks.DRAINED_BLOCK.get(),
                 ModBlocks.DRAINED_BLOCK_2.get(),

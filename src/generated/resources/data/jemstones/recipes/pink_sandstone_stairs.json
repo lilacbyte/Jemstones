@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "s": {
+      "item": "jemstones:pink_sandstone"
+    }
+  },
+  "pattern": [
+    "s  ",
+    "ss ",
+    "sss"
+  ],
+  "result": {
+    "count": 8,
+    "item": "jemstones:pink_sandstone_stairs"
+  },
+  "show_notification": true
+}

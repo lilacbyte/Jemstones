@@ -10,5 +10,8 @@
   "block.jemstones.drained_block_2": "Drained Block",
   "block.jemstones.drained_bands": "Drained Block",
   "block.jemstones.smooth_carbonite": "Carbonite",
-  "block.jemstones.chiseled_carbonite": "Chiseled Carbonite"
+  "block.jemstones.chiseled_carbonite": "Chiseled Carbonite",
+  "block.jemstones.pink_sandstone": "Pink Sandstone",
+  "block.jemstones.pink_sandstone_stairs": "Pink Sandstone Stairs",
+  "block.jemstones.pink_sandstone_slab": "Pink Sandstone Slab"
 }

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "p": {
+      "item": "minecraft:pink_dye"
+    },
+    "s": {
+      "item": "minecraft:sandstone"
+    }
+  },
+  "pattern": [
+    "sss",
+    "sps",
+    "sss"
+  ],
+  "result": {
+    "count": 8,
+    "item": "jemstones:pink_sandstone"
+  },
+  "show_notification": true
+}
