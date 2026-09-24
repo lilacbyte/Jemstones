@@ -12,10 +12,12 @@ public class ClientEvents {
     @SubscribeEvent
     public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(RubyModel.LAYER, RubyModel::createBodyLayer);
+        event.registerLayerDefinition(PepoModel.LAYER, PepoModel::createBodyLayer);
     }
 
     @SubscribeEvent
     public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerEntityRenderer(ModEntities.RUBY.get(), RubyRenderer::new);
+        event.registerEntityRenderer(ModEntities.MELON.get(), MelonRenderer::new);
     }
 }

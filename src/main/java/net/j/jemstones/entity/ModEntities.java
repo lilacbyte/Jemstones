@@ -18,6 +18,11 @@ public class ModEntities {
                     .sized(0.7F, 1.2F).fireImmune().clientTrackingRange(8)
                     .build(Jemstones.MOD_ID + ":ruby"));
 
+    public static final RegistryObject<EntityType<Melon>> MELON = ENTITIES.register("melon",
+            () -> EntityType.Builder.of(Melon::new, MobCategory.CREATURE)
+                    .sized(0.5F, 1.5F).clientTrackingRange(8)
+                    .build(Jemstones.MOD_ID + ":melon"));
+
     public static void register(IEventBus eventBus) {
         ENTITIES.register(eventBus);
         eventBus.addListener(ModEntities::registerAttributes);
@@ -25,5 +30,6 @@ public class ModEntities {
 
     private static void registerAttributes(EntityAttributeCreationEvent event) {
         event.put(RUBY.get(), Ruby.createAttributes().build());
+        event.put(MELON.get(), Pepo.createAttributes().build());
     }
 }

@@ -2,6 +2,8 @@ package net.j.jemstones.item;
 
 import net.j.jemstones.Jemstones;
 import net.j.jemstones.block.ModBlocks;
+import net.j.jemstones.entity.ModEntities;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -42,6 +44,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> PINK_SANDSTONE_SLAB = ITEMS.register("pink_sandstone_slab",
             () -> new BlockItem(ModBlocks.PINK_SANDSTONE_SLAB.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> MELON_SPAWN_EGG = ITEMS.register("melon_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.MELON, 0xB5B128, 0x5A671A, new Item.Properties()));
 
     // behaviour comes later
     public static final RegistryObject<Item> ACTIVATED_GEM_SHARD = ITEMS.register("active_gem_shard",
