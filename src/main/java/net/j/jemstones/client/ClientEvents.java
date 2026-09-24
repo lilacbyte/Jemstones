@@ -19,5 +19,6 @@ public class ClientEvents {
     public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerEntityRenderer(ModEntities.RUBY.get(), RubyRenderer::new);
         event.registerEntityRenderer(ModEntities.MELON.get(), MelonRenderer::new);
+        event.registerEntityRenderer(ModEntities.PUMPKIN.get(), PumpkinRenderer::new);
     }
 }

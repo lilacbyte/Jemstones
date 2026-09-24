@@ -15,5 +15,7 @@
   "block.jemstones.pink_sandstone_stairs": "Pink Sandstone Stairs",
   "block.jemstones.pink_sandstone_slab": "Pink Sandstone Slab",
   "entity.jemstones.melon": "Melon Head",
-  "item.jemstones.melon_spawn_egg": "Melon Head Spawn Egg"
+  "item.jemstones.melon_spawn_egg": "Melon Head Spawn Egg",
+  "entity.jemstones.pumpkin": "Pumpkin Head",
+  "item.jemstones.pumpkin_spawn_egg": "Pumpkin Head Spawn Egg"
 }

@@ -14,5 +14,7 @@ Ruby voice sounds are unavailable in the upstream checkout used for this port.
 
 "Steven Universe" and all related characters and elements are trademarks of Cartoon Network.
 
-Melon uses the original Pepo model, attributes and basic combat with a spawn egg.
+Melon and Pumpkin use the original Pepo model, attributes and basic combat with spawn eggs.
 Rose Quartz following is deferred. Upstream Pepo voice files are unavailable.
+Pumpkin supports torch toggling, saved lighting and matching drops. Automatic
+Halloween lighting is deferred.
