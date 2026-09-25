@@ -18,6 +18,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.jemstones_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.RUBY_GEM.get());
+                        output.accept(ModItems.AMETHYST_GEM.get());
                         output.accept(ModItems.MELON_SPAWN_EGG.get());
                         output.accept(ModItems.PUMPKIN_SPAWN_EGG.get());
                         output.accept(ModItems.ACTIVATED_GEM_SHARD.get());

@@ -28,6 +28,11 @@ public class ModEntities {
                     .sized(0.5F, 1.5F).clientTrackingRange(8)
                     .build(Jemstones.MOD_ID + ":pumpkin"));
 
+    public static final RegistryObject<EntityType<QuartzGem>> AMETHYST = ENTITIES.register("amethyst",
+            () -> EntityType.Builder.of(QuartzGem::new, MobCategory.CREATURE)
+                    .sized(0.9F, 2.3F).clientTrackingRange(8)
+                    .build(Jemstones.MOD_ID + ":amethyst"));
+
     public static void register(IEventBus eventBus) {
         ENTITIES.register(eventBus);
         eventBus.addListener(ModEntities::registerAttributes);
@@ -35,6 +40,7 @@ public class ModEntities {
 
     private static void registerAttributes(EntityAttributeCreationEvent event) {
         event.put(RUBY.get(), Ruby.createAttributes().build());
+        event.put(AMETHYST.get(), QuartzGem.createAttributes(12.0D).build());
         event.put(MELON.get(), Pepo.createAttributes().build());
         event.put(PUMPKIN.get(), Pepo.createAttributes().build());
     }

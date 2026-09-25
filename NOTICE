@@ -18,3 +18,7 @@ Melon and Pumpkin use the original Pepo model, attributes and basic combat with 
 Rose Quartz following is deferred. Upstream Pepo voice files are unavailable.
 Pumpkin supports torch toggling, saved lighting and matching drops. Automatic
 Halloween lighting is deferred.
+
+Amethyst includes one fixed original quartz appearance, basic combat, ownership
+and gem-item summoning. Variants, equipment, jobs, fusion and poof/reform remain
+deferred; upstream voice files are unavailable.

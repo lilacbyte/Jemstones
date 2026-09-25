@@ -51,6 +51,9 @@ public class ModItems {
     public static final RegistryObject<Item> PUMPKIN_SPAWN_EGG = ITEMS.register("pumpkin_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntities.PUMPKIN, 0xD58116, 0x744E03, new Item.Properties()));
 
+    public static final RegistryObject<Item> AMETHYST_GEM = ITEMS.register("amethyst_gem",
+            () -> new QuartzGemItem(ModEntities.AMETHYST, new Item.Properties().stacksTo(1)));
+
     // behaviour comes later
     public static final RegistryObject<Item> ACTIVATED_GEM_SHARD = ITEMS.register("active_gem_shard",
             () -> new Item(new Item.Properties()));

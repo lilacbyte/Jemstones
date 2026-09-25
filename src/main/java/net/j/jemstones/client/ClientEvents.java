@@ -12,12 +12,15 @@ public class ClientEvents {
     @SubscribeEvent
     public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(RubyModel.LAYER, RubyModel::createBodyLayer);
+        event.registerLayerDefinition(QuartzGemModel.LAYER, QuartzGemModel::createBodyLayer);
         event.registerLayerDefinition(PepoModel.LAYER, PepoModel::createBodyLayer);
     }
 
     @SubscribeEvent
     public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerEntityRenderer(ModEntities.RUBY.get(), RubyRenderer::new);
+        event.registerEntityRenderer(ModEntities.AMETHYST.get(), context ->
+                new QuartzGemRenderer(context, "amethyst", 0xB899CA, 0xF9E4FF, 0x999999, 0xDC64FD, false));
         event.registerEntityRenderer(ModEntities.MELON.get(), MelonRenderer::new);
         event.registerEntityRenderer(ModEntities.PUMPKIN.get(), PumpkinRenderer::new);
     }
