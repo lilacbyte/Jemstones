@@ -57,6 +57,9 @@ public class ModItems {
     public static final RegistryObject<Item> CARNELIAN_GEM = ITEMS.register("carnelian_gem",
             () -> new QuartzGemItem(ModEntities.CARNELIAN, new Item.Properties().stacksTo(1)));
 
+    public static final RegistryObject<Item> JASPER_GEM = ITEMS.register("jasper_gem",
+            () -> new QuartzGemItem(ModEntities.JASPER, new Item.Properties().stacksTo(1)));
+
     // behaviour comes later
     public static final RegistryObject<Item> ACTIVATED_GEM_SHARD = ITEMS.register("active_gem_shard",
             () -> new Item(new Item.Properties()));

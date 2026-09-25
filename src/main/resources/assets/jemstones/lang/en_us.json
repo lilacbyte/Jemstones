@@ -21,5 +21,7 @@
   "entity.jemstones.amethyst": "Amethyst",
   "item.jemstones.amethyst_gem": "Amethyst Gem",
   "entity.jemstones.carnelian": "Carnelian",
-  "item.jemstones.carnelian_gem": "Carnelian Gem"
+  "item.jemstones.carnelian_gem": "Carnelian Gem",
+  "entity.jemstones.jasper": "Jasper",
+  "item.jemstones.jasper_gem": "Jasper Gem"
 }

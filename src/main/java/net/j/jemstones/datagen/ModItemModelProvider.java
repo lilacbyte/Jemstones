@@ -18,6 +18,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         simpleItem(ModItems.RUBY_GEM);
+        simpleItem(ModItems.JASPER_GEM);
         simpleItem(ModItems.CARNELIAN_GEM);
         simpleItem(ModItems.AMETHYST_GEM);
         withExistingParent("melon_spawn_egg", mcLoc("item/template_spawn_egg"));

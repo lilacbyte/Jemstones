@@ -19,6 +19,8 @@ public class ClientEvents {
     @SubscribeEvent
     public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerEntityRenderer(ModEntities.RUBY.get(), RubyRenderer::new);
+        event.registerEntityRenderer(ModEntities.JASPER.get(), context ->
+                new QuartzGemRenderer(context, "jasper", 0xFFA351, 0xFFFCE8, 0xD87F33, 0xFF3F01, true));
         event.registerEntityRenderer(ModEntities.CARNELIAN.get(), context ->
                 new QuartzGemRenderer(context, "carnelian", 0xE1764D, 0xF24807, 0x993333, 0xFF2D5D, false));
         event.registerEntityRenderer(ModEntities.AMETHYST.get(), context ->

@@ -9,7 +9,7 @@ Ruby currently has basic movement, combat and ownership with one fixed original
 appearance. The Ruby Gem item summons an owned Ruby. Fusion, jobs and the
 full gem lifecycle are not yet ported.
 Textures are copied unchanged. Models, resource references and language keys
-are adapted; Ruby and Pepo limb pivots are adjusted for the new model API.
+are adapted; Ruby, Pepo and Quartz limb pivots are adjusted for the new model API.
 Ruby voice sounds are unavailable in the upstream checkout used for this port.
 
 "Steven Universe" and all related characters and elements are trademarks of Cartoon Network.
@@ -19,10 +19,6 @@ Rose Quartz following is deferred. Upstream Pepo voice files are unavailable.
 Pumpkin supports torch toggling, saved lighting and matching drops. Automatic
 Halloween lighting is deferred.
 
-Amethyst includes one fixed original quartz appearance, basic combat, ownership
-and gem-item summoning. Variants, equipment, jobs, fusion and poof/reform remain
-deferred; upstream voice files are unavailable.
-
-Carnelian includes one fixed original quartz appearance, basic combat, ownership
-and gem-item summoning. Variants, equipment, jobs, fusion and poof/reform remain
-deferred; upstream voice files are unavailable.
+Amethyst, Carnelian and Jasper include one fixed original quartz appearance each,
+basic combat, ownership and gem-item summoning. Variants, equipment, jobs, fusion
+and poof/reform remain deferred; upstream voice files are unavailable.
