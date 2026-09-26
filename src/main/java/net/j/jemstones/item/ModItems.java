@@ -60,6 +60,15 @@ public class ModItems {
     public static final RegistryObject<Item> JASPER_GEM = ITEMS.register("jasper_gem",
             () -> new QuartzGemItem(ModEntities.JASPER, new Item.Properties().stacksTo(1)));
 
+    public static final RegistryObject<Item> CHISELED_PINK_SANDSTONE = ITEMS.register("chiseled_pink_sandstone",
+            () -> new BlockItem(ModBlocks.CHISELED_PINK_SANDSTONE.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> SMOOTH_PINK_SANDSTONE = ITEMS.register("smooth_pink_sandstone",
+            () -> new BlockItem(ModBlocks.SMOOTH_PINK_SANDSTONE.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> WAVY_PINK_SANDSTONE = ITEMS.register("wavy_pink_sandstone",
+            () -> new BlockItem(ModBlocks.WAVY_PINK_SANDSTONE.get(), new Item.Properties()));
+
     // behaviour comes later
     public static final RegistryObject<Item> ACTIVATED_GEM_SHARD = ITEMS.register("active_gem_shard",
             () -> new Item(new Item.Properties()));

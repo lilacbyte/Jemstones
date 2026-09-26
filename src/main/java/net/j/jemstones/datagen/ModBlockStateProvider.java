@@ -37,5 +37,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 modLoc("block/pink_sandstone_normal"), modLoc("block/pink_sandstone_bottom"),
                 modLoc("block/pink_sandstone_top"));
         simpleBlockItem(ModBlocks.PINK_SANDSTONE_SLAB.get(), models().getExistingFile(modLoc("block/pink_sandstone_slab")));
+        simpleBlockWithItem(ModBlocks.CHISELED_PINK_SANDSTONE.get(), models().cubeColumn("chiseled_pink_sandstone",
+                modLoc("block/pink_sandstone_carved"), modLoc("block/pink_sandstone_top")));
+        simpleBlockWithItem(ModBlocks.SMOOTH_PINK_SANDSTONE.get(), models().cubeColumn("smooth_pink_sandstone",
+                modLoc("block/pink_sandstone_smooth"), modLoc("block/pink_sandstone_top")));
+        simpleBlockWithItem(ModBlocks.WAVY_PINK_SANDSTONE.get(), models().cubeColumn("wavy_pink_sandstone",
+                modLoc("block/pink_sandstone_wavy"), modLoc("block/pink_sandstone_top")));
     }
 }

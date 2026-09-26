@@ -31,5 +31,17 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern("sss").define('s', ModBlocks.PINK_SANDSTONE.get())
                 .unlockedBy("has_pink_sandstone", has(ModBlocks.PINK_SANDSTONE.get()))
                 .save(output);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_PINK_SANDSTONE.get(), 1)
+                .pattern("s").pattern("s").define('s', ModBlocks.PINK_SANDSTONE_SLAB.get())
+                .unlockedBy("has_pink_sandstone_slab", has(ModBlocks.PINK_SANDSTONE_SLAB.get()))
+                .save(output);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_PINK_SANDSTONE.get(), 4)
+                .pattern("ss").pattern("ss").define('s', ModBlocks.PINK_SANDSTONE.get())
+                .unlockedBy("has_pink_sandstone", has(ModBlocks.PINK_SANDSTONE.get()))
+                .save(output);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAVY_PINK_SANDSTONE.get(), 3)
+                .pattern(" s ").pattern("s s").define('s', ModBlocks.PINK_SANDSTONE.get())
+                .unlockedBy("has_pink_sandstone", has(ModBlocks.PINK_SANDSTONE.get()))
+                .save(output);
     }
 }

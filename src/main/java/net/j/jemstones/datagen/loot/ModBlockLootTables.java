@@ -31,6 +31,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         dropSelf(ModBlocks.SMOOTH_CARBONITE.get());
         dropSelf(ModBlocks.CHISELED_CARBONITE.get());
         dropSelf(ModBlocks.PINK_SANDSTONE.get());
+        dropSelf(ModBlocks.WAVY_PINK_SANDSTONE.get());
+        dropSelf(ModBlocks.SMOOTH_PINK_SANDSTONE.get());
+        dropSelf(ModBlocks.CHISELED_PINK_SANDSTONE.get());
         dropSelf(ModBlocks.PINK_SANDSTONE_STAIRS.get());
         add(ModBlocks.PINK_SANDSTONE_SLAB.get(), this::createSlabItemTable);
     }

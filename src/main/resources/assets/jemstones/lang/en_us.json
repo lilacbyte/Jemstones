@@ -23,5 +23,8 @@
   "entity.jemstones.carnelian": "Carnelian",
   "item.jemstones.carnelian_gem": "Carnelian Gem",
   "entity.jemstones.jasper": "Jasper",
-  "item.jemstones.jasper_gem": "Jasper Gem"
+  "item.jemstones.jasper_gem": "Jasper Gem",
+  "block.jemstones.chiseled_pink_sandstone": "Chiseled Pink Sandstone",
+  "block.jemstones.smooth_pink_sandstone": "Smooth Pink Sandstone",
+  "block.jemstones.wavy_pink_sandstone": "Wavy Pink Sandstone"
 }

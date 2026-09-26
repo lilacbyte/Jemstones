@@ -51,6 +51,15 @@ public class ModBlocks {
     public static final RegistryObject<SlabBlock> PINK_SANDSTONE_SLAB = BLOCKS.register("pink_sandstone_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(PINK_SANDSTONE.get())));
 
+    public static final RegistryObject<Block> CHISELED_PINK_SANDSTONE = BLOCKS.register("chiseled_pink_sandstone",
+            () -> new Block(BlockBehaviour.Properties.copy(PINK_SANDSTONE.get())));
+
+    public static final RegistryObject<Block> SMOOTH_PINK_SANDSTONE = BLOCKS.register("smooth_pink_sandstone",
+            () -> new Block(BlockBehaviour.Properties.copy(PINK_SANDSTONE.get())));
+
+    public static final RegistryObject<Block> WAVY_PINK_SANDSTONE = BLOCKS.register("wavy_pink_sandstone",
+            () -> new Block(BlockBehaviour.Properties.copy(PINK_SANDSTONE.get())));
+
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
     }
