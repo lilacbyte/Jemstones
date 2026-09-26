@@ -18,6 +18,8 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         simpleItem(ModItems.RUBY_GEM);
+        simpleItem(ModItems.TIME_GLASS);
+        simpleItem(ModItems.STRAWBERRY_SLICE);
         simpleItem(ModItems.JASPER_GEM);
         simpleItem(ModItems.CARNELIAN_GEM);
         simpleItem(ModItems.AMETHYST_GEM);

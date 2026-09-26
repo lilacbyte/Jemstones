@@ -6,6 +6,8 @@ import net.j.jemstones.entity.ModEntities;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -68,6 +70,13 @@ public class ModItems {
 
     public static final RegistryObject<Item> WAVY_PINK_SANDSTONE = ITEMS.register("wavy_pink_sandstone",
             () -> new BlockItem(ModBlocks.WAVY_PINK_SANDSTONE.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> STRAWBERRY_SLICE = ITEMS.register("strawberry_slice",
+            () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
+                    .nutrition(2).saturationMod(0.3F).build())));
+
+    public static final RegistryObject<Item> TIME_GLASS = ITEMS.register("time_glass",
+            () -> new TimeGlassItem(new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
 
     // behaviour comes later
     public static final RegistryObject<Item> ACTIVATED_GEM_SHARD = ITEMS.register("active_gem_shard",
