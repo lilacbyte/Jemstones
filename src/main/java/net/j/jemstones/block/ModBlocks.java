@@ -4,6 +4,7 @@ import net.j.jemstones.Jemstones;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
@@ -59,6 +60,15 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> WAVY_PINK_SANDSTONE = BLOCKS.register("wavy_pink_sandstone",
             () -> new Block(BlockBehaviour.Properties.copy(PINK_SANDSTONE.get())));
+
+    public static final RegistryObject<Block> GIANT_STRAWBERRY = BLOCKS.register("giant_strawberry_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.MELON).mapColor(MapColor.COLOR_RED)
+                    .strength(1.0F).sound(SoundType.SLIME_BLOCK)));
+
+    public static final RegistryObject<DrainedGravelBlock> DRAINED_GRAVEL = BLOCKS.register("drained_gravel",
+            () -> new DrainedGravelBlock(BlockBehaviour.Properties.copy(Blocks.GRAVEL)
+                    .mapColor(MapColor.COLOR_PURPLE).strength(40.0F, 1.0F).requiresCorrectToolForDrops()
+                    .pushReaction(PushReaction.BLOCK)));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

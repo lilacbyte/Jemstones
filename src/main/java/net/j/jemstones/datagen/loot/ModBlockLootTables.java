@@ -1,6 +1,14 @@
 package net.j.jemstones.datagen.loot;
 
 import net.j.jemstones.block.ModBlocks;
+import net.j.jemstones.item.ModItems;
+import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
+import net.minecraft.world.level.storage.loot.functions.LimitCount;
+import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.IntRange;
+import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.data.loot.LootTableProvider;
@@ -24,6 +32,12 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
+        dropSelf(ModBlocks.DRAINED_GRAVEL.get());
+        add(ModBlocks.GIANT_STRAWBERRY.get(), block -> createSilkTouchDispatchTable(block,
+                applyExplosionDecay(block, LootItem.lootTableItem(ModItems.STRAWBERRY_SLICE.get())
+                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(3, 7)))
+                        .apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE))
+                        .apply(LimitCount.limitCount(IntRange.upperBound(9))))));
         dropSelf(ModBlocks.MOON_BLESSED_STONE.get());
         dropSelf(ModBlocks.DRAINED_BLOCK.get());
         dropSelf(ModBlocks.DRAINED_BLOCK_2.get());

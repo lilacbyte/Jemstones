@@ -13,6 +13,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+        simpleBlockWithItem(ModBlocks.DRAINED_GRAVEL.get(), cubeAll(ModBlocks.DRAINED_GRAVEL.get()));
+        simpleBlockWithItem(ModBlocks.GIANT_STRAWBERRY.get(), models().cubeBottomTop("giant_strawberry_block",
+                modLoc("block/giant_strawberry_side"), modLoc("block/giant_strawberry_bottom"),
+                modLoc("block/giant_strawberry_top")));
         simpleBlockWithItem(ModBlocks.MOON_BLESSED_STONE.get(), cubeAll(ModBlocks.MOON_BLESSED_STONE.get()));
         simpleBlockWithItem(ModBlocks.DRAINED_BLOCK.get(), models().cubeColumn("drained_block",
                 modLoc("block/drained_block_side"), modLoc("block/drained_block_top"))

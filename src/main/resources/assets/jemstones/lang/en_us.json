@@ -28,5 +28,7 @@
   "block.jemstones.smooth_pink_sandstone": "Smooth Pink Sandstone",
   "block.jemstones.wavy_pink_sandstone": "Wavy Pink Sandstone",
   "item.jemstones.strawberry_slice": "Giant Strawberry Slice",
-  "item.jemstones.time_glass": "The Glass of Time"
+  "item.jemstones.time_glass": "The Glass of Time",
+  "block.jemstones.giant_strawberry_block": "Giant Strawberry",
+  "block.jemstones.drained_gravel": "Drained Gravel"
 }

@@ -27,3 +27,8 @@ Giant Strawberry Slice retains its food values. The Glass of Time negates shared
 day time and may toggle overworld weather, with a cancelable Forge event.
 Modern weather timers use the 1.20.1 weather API. Neither item has a standalone
 recipe in this source checkout; crop and structure acquisition remain deferred.
+
+Giant Strawberry blocks include the original slice drops, Fortune cap, Silk Touch
+and nine-slice crafting recipe. Stems, seeds and natural generation remain deferred.
+// Textures by Peridot#7455
+Drained Gravel retains falling behaviour, stone-tier shovel harvesting and dust colour.

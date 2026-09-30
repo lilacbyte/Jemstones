@@ -78,6 +78,11 @@ public class ModItems {
     public static final RegistryObject<Item> TIME_GLASS = ITEMS.register("time_glass",
             () -> new TimeGlassItem(new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
 
+    public static final RegistryObject<Item> GIANT_STRAWBERRY = ITEMS.register("giant_strawberry_block",
+            () -> new BlockItem(ModBlocks.GIANT_STRAWBERRY.get(), new Item.Properties()));
+    public static final RegistryObject<Item> DRAINED_GRAVEL = ITEMS.register("drained_gravel",
+            () -> new BlockItem(ModBlocks.DRAINED_GRAVEL.get(), new Item.Properties()));
+
     // behaviour comes later
     public static final RegistryObject<Item> ACTIVATED_GEM_SHARD = ITEMS.register("active_gem_shard",
             () -> new Item(new Item.Properties()));

@@ -1,6 +1,7 @@
 package net.j.jemstones.datagen;
 
 import net.j.jemstones.block.ModBlocks;
+import net.j.jemstones.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeCategory;
@@ -17,6 +18,11 @@ public class ModRecipeProvider extends RecipeProvider {
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> output) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GIANT_STRAWBERRY.get())
+                .pattern("sss").pattern("sss").pattern("sss")
+                .define('s', ModItems.STRAWBERRY_SLICE.get())
+                .unlockedBy("has_strawberry_slice", has(ModItems.STRAWBERRY_SLICE.get()))
+                .save(output);
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_SANDSTONE.get(), 8)
                 .pattern("sss").pattern("sps").pattern("sss")
                 .define('s', Items.SANDSTONE).define('p', Items.PINK_DYE)

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_strawberry_slice": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "jemstones:strawberry_slice"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "jemstones:giant_strawberry_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_strawberry_slice",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "jemstones:giant_strawberry_block"
+    ]
+  },
+  "sends_telemetry_event": false
+}
