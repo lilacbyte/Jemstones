@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/stem_growth7",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "stem": "jemstones:block/giant_strawberry_stem_6"
+  }
+}

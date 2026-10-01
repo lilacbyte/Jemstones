@@ -30,5 +30,8 @@
   "item.jemstones.strawberry_slice": "Giant Strawberry Slice",
   "item.jemstones.time_glass": "The Glass of Time",
   "block.jemstones.giant_strawberry_block": "Giant Strawberry",
-  "block.jemstones.drained_gravel": "Drained Gravel"
+  "block.jemstones.drained_gravel": "Drained Gravel",
+  "item.jemstones.strawberry_seeds": "Giant Strawberry Seeds",
+  "block.jemstones.giant_strawberry_stem": "Giant Strawberry Stem",
+  "block.jemstones.attached_giant_strawberry_stem": "Attached Giant Strawberry Stem"
 }

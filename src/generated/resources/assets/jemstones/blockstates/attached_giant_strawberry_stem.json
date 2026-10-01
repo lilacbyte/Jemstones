@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "jemstones:block/giant_strawberry_stem_fruit",
+      "y": 180
+    },
+    "facing=north": {
+      "model": "jemstones:block/giant_strawberry_stem_fruit",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "jemstones:block/giant_strawberry_stem_fruit",
+      "y": 270
+    },
+    "facing=west": {
+      "model": "jemstones:block/giant_strawberry_stem_fruit"
+    }
+  }
+}

@@ -3,6 +3,9 @@ package net.j.jemstones.datagen;
 import net.j.jemstones.Jemstones;
 import net.j.jemstones.block.ModBlocks;
 import net.minecraft.data.PackOutput;
+import net.minecraft.world.level.block.StemBlock;
+import net.minecraft.world.level.block.AttachedStemBlock;
+import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
@@ -13,6 +16,17 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+        getVariantBuilder(ModBlocks.GIANT_STRAWBERRY_STEM.get()).forAllStates(state -> {
+            int age = state.getValue(StemBlock.AGE);
+            return ConfiguredModel.builder().modelFile(models()
+                    .withExistingParent("giant_strawberry_stem_growth" + age, mcLoc("block/stem_growth7"))
+                    .texture("stem", modLoc("block/giant_strawberry_stem_" + age))
+                    .renderType("cutout")).build();
+        });
+        getVariantBuilder(ModBlocks.ATTACHED_GIANT_STRAWBERRY_STEM.get()).forAllStates(state ->
+                ConfiguredModel.builder().modelFile(models().getExistingFile(modLoc("block/giant_strawberry_stem_fruit")))
+                        .rotationY(((int) state.getValue(AttachedStemBlock.FACING).toYRot() + 270) % 360)
+                        .build());
         simpleBlockWithItem(ModBlocks.DRAINED_GRAVEL.get(), cubeAll(ModBlocks.DRAINED_GRAVEL.get()));
         simpleBlockWithItem(ModBlocks.GIANT_STRAWBERRY.get(), models().cubeBottomTop("giant_strawberry_block",
                 modLoc("block/giant_strawberry_side"), modLoc("block/giant_strawberry_bottom"),

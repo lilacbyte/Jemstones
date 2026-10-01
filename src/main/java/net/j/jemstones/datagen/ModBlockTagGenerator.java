@@ -18,6 +18,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+        tag(BlockTags.MAINTAINS_FARMLAND).add(ModBlocks.GIANT_STRAWBERRY_STEM.get(),
+                ModBlocks.ATTACHED_GIANT_STRAWBERRY_STEM.get());
         tag(BlockTags.MINEABLE_WITH_SHOVEL).add(ModBlocks.DRAINED_GRAVEL.get());
         tag(BlockTags.NEEDS_STONE_TOOL).add(ModBlocks.DRAINED_GRAVEL.get());
         tag(BlockTags.MINEABLE_WITH_AXE).add(ModBlocks.GIANT_STRAWBERRY.get());

@@ -6,6 +6,7 @@ import net.j.jemstones.entity.ModEntities;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -82,6 +83,9 @@ public class ModItems {
             () -> new BlockItem(ModBlocks.GIANT_STRAWBERRY.get(), new Item.Properties()));
     public static final RegistryObject<Item> DRAINED_GRAVEL = ITEMS.register("drained_gravel",
             () -> new BlockItem(ModBlocks.DRAINED_GRAVEL.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> STRAWBERRY_SEEDS = ITEMS.register("strawberry_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.GIANT_STRAWBERRY_STEM.get(), new Item.Properties()));
 
     // behaviour comes later
     public static final RegistryObject<Item> ACTIVATED_GEM_SHARD = ITEMS.register("active_gem_shard",

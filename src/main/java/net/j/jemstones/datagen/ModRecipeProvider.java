@@ -7,6 +7,7 @@ import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.world.item.Items;
 
 import java.util.function.Consumer;
@@ -18,6 +19,10 @@ public class ModRecipeProvider extends RecipeProvider {
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> output) {
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.STRAWBERRY_SEEDS.get())
+                .requires(ModItems.STRAWBERRY_SLICE.get())
+                .unlockedBy("has_strawberry_slice", has(ModItems.STRAWBERRY_SLICE.get()))
+                .save(output);
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GIANT_STRAWBERRY.get())
                 .pattern("sss").pattern("sss").pattern("sss")
                 .define('s', ModItems.STRAWBERRY_SLICE.get())

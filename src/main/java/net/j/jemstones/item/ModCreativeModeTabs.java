@@ -20,6 +20,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.RUBY_GEM.get());
                         output.accept(ModItems.TIME_GLASS.get());
                         output.accept(ModItems.STRAWBERRY_SLICE.get());
+                        output.accept(ModItems.STRAWBERRY_SEEDS.get());
                         output.accept(ModItems.GIANT_STRAWBERRY.get());
                         output.accept(ModItems.DRAINED_GRAVEL.get());
                         output.accept(ModItems.JASPER_GEM.get());

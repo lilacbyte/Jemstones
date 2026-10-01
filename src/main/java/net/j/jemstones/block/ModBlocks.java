@@ -1,6 +1,9 @@
 package net.j.jemstones.block;
 
 import net.j.jemstones.Jemstones;
+import net.j.jemstones.item.ModItems;
+import net.minecraft.world.level.block.StemBlock;
+import net.minecraft.world.level.block.AttachedStemBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SlabBlock;
@@ -61,14 +64,22 @@ public class ModBlocks {
     public static final RegistryObject<Block> WAVY_PINK_SANDSTONE = BLOCKS.register("wavy_pink_sandstone",
             () -> new Block(BlockBehaviour.Properties.copy(PINK_SANDSTONE.get())));
 
-    public static final RegistryObject<Block> GIANT_STRAWBERRY = BLOCKS.register("giant_strawberry_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.MELON).mapColor(MapColor.COLOR_RED)
+    public static final RegistryObject<GiantStrawberryBlock> GIANT_STRAWBERRY = BLOCKS.register("giant_strawberry_block",
+            () -> new GiantStrawberryBlock(BlockBehaviour.Properties.copy(Blocks.MELON).mapColor(MapColor.COLOR_RED)
                     .strength(1.0F).sound(SoundType.SLIME_BLOCK)));
 
     public static final RegistryObject<DrainedGravelBlock> DRAINED_GRAVEL = BLOCKS.register("drained_gravel",
             () -> new DrainedGravelBlock(BlockBehaviour.Properties.copy(Blocks.GRAVEL)
                     .mapColor(MapColor.COLOR_PURPLE).strength(40.0F, 1.0F).requiresCorrectToolForDrops()
                     .pushReaction(PushReaction.BLOCK)));
+
+    public static final RegistryObject<StemBlock> GIANT_STRAWBERRY_STEM = BLOCKS.register("giant_strawberry_stem",
+            () -> new StemBlock(GIANT_STRAWBERRY.get(), ModItems.STRAWBERRY_SEEDS,
+                    BlockBehaviour.Properties.copy(Blocks.MELON_STEM)));
+
+    public static final RegistryObject<AttachedStemBlock> ATTACHED_GIANT_STRAWBERRY_STEM = BLOCKS.register("attached_giant_strawberry_stem",
+            () -> new AttachedStemBlock(GIANT_STRAWBERRY.get(), ModItems.STRAWBERRY_SEEDS,
+                    BlockBehaviour.Properties.copy(Blocks.ATTACHED_MELON_STEM)));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

@@ -32,6 +32,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
+        add(ModBlocks.GIANT_STRAWBERRY_STEM.get(), block -> createStemDrops(block, ModItems.STRAWBERRY_SEEDS.get()));
+        add(ModBlocks.ATTACHED_GIANT_STRAWBERRY_STEM.get(), block -> createAttachedStemDrops(block, ModItems.STRAWBERRY_SEEDS.get()));
         dropSelf(ModBlocks.DRAINED_GRAVEL.get());
         add(ModBlocks.GIANT_STRAWBERRY.get(), block -> createSilkTouchDispatchTable(block,
                 applyExplosionDecay(block, LootItem.lootTableItem(ModItems.STRAWBERRY_SLICE.get())
