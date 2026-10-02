@@ -81,6 +81,10 @@ public class ModBlocks {
             () -> new AttachedStemBlock(GIANT_STRAWBERRY.get(), ModItems.STRAWBERRY_SEEDS,
                     BlockBehaviour.Properties.copy(Blocks.ATTACHED_MELON_STEM)));
 
+    public static final RegistryObject<StairBlock> WAVY_PINK_SANDSTONE_STAIRS = BLOCKS.register("wavy_pink_sandstone_stairs",
+            () -> new StairBlock(() -> WAVY_PINK_SANDSTONE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(WAVY_PINK_SANDSTONE.get())));
+
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
     }

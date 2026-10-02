@@ -19,6 +19,16 @@ public class ModRecipeProvider extends RecipeProvider {
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> output) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAVY_PINK_SANDSTONE_STAIRS.get(), 8)
+                .pattern("s  ").pattern("ss ").pattern("sss")
+                .define('s', ModBlocks.WAVY_PINK_SANDSTONE.get())
+                .unlockedBy("has_wavy_pink_sandstone", has(ModBlocks.WAVY_PINK_SANDSTONE.get()))
+                .save(output);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ACTIVATED_GEM_BASE.get())
+                .pattern("###").pattern("###").pattern("###")
+                .define('#', ModItems.ACTIVATED_GEM_SHARD.get())
+                .unlockedBy("has_active_gem_shard", has(ModItems.ACTIVATED_GEM_SHARD.get()))
+                .save(output);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.STRAWBERRY_SEEDS.get())
                 .requires(ModItems.STRAWBERRY_SLICE.get())
                 .unlockedBy("has_strawberry_slice", has(ModItems.STRAWBERRY_SLICE.get()))

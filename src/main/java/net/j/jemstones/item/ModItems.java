@@ -87,13 +87,16 @@ public class ModItems {
     public static final RegistryObject<Item> STRAWBERRY_SEEDS = ITEMS.register("strawberry_seeds",
             () -> new ItemNameBlockItem(ModBlocks.GIANT_STRAWBERRY_STEM.get(), new Item.Properties()));
 
+    public static final RegistryObject<Item> WAVY_PINK_SANDSTONE_STAIRS = ITEMS.register("wavy_pink_sandstone_stairs",
+            () -> new BlockItem(ModBlocks.WAVY_PINK_SANDSTONE_STAIRS.get(), new Item.Properties()));
+
     // behaviour comes later
     public static final RegistryObject<Item> ACTIVATED_GEM_SHARD = ITEMS.register("active_gem_shard",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> ACTIVATED_GEM_BASE = ITEMS.register("active_gem_base",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().stacksTo(16)));
     public static final RegistryObject<Item> INACTIVE_GEM_BASE = ITEMS.register("inactive_gem_base",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().stacksTo(16)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

@@ -32,6 +32,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
+        dropSelf(ModBlocks.WAVY_PINK_SANDSTONE_STAIRS.get());
         add(ModBlocks.GIANT_STRAWBERRY_STEM.get(), block -> createStemDrops(block, ModItems.STRAWBERRY_SEEDS.get()));
         add(ModBlocks.ATTACHED_GIANT_STRAWBERRY_STEM.get(), block -> createAttachedStemDrops(block, ModItems.STRAWBERRY_SEEDS.get()));
         dropSelf(ModBlocks.DRAINED_GRAVEL.get());

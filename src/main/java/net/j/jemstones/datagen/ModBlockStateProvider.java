@@ -16,6 +16,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+        stairsBlock(ModBlocks.WAVY_PINK_SANDSTONE_STAIRS.get(), modLoc("block/pink_sandstone_wavy"),
+                modLoc("block/pink_sandstone_bottom"), modLoc("block/pink_sandstone_top"));
+        simpleBlockItem(ModBlocks.WAVY_PINK_SANDSTONE_STAIRS.get(),
+                models().getExistingFile(modLoc("block/wavy_pink_sandstone_stairs")));
         getVariantBuilder(ModBlocks.GIANT_STRAWBERRY_STEM.get()).forAllStates(state -> {
             int age = state.getValue(StemBlock.AGE);
             return ConfiguredModel.builder().modelFile(models()
