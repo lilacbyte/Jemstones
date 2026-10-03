@@ -90,6 +90,9 @@ public class ModItems {
     public static final RegistryObject<Item> WAVY_PINK_SANDSTONE_STAIRS = ITEMS.register("wavy_pink_sandstone_stairs",
             () -> new BlockItem(ModBlocks.WAVY_PINK_SANDSTONE_STAIRS.get(), new Item.Properties()));
 
+    public static final RegistryObject<Item> STRAWBERRY_SPAWN_EGG = ITEMS.register("strawberry_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.STRAWBERRY, 0xEF4B69, 0x80855A, new Item.Properties()));
+
     // behaviour comes later
     public static final RegistryObject<Item> ACTIVATED_GEM_SHARD = ITEMS.register("active_gem_shard",
             () -> new Item(new Item.Properties()));

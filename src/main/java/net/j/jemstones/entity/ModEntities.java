@@ -43,6 +43,11 @@ public class ModEntities {
                     .sized(0.9F, 2.3F).clientTrackingRange(8)
                     .build(Jemstones.MOD_ID + ":jasper"));
 
+    public static final RegistryObject<EntityType<Strawberry>> STRAWBERRY = ENTITIES.register("strawberry",
+            () -> EntityType.Builder.of(Strawberry::new, MobCategory.CREATURE)
+                    .sized(0.5F, 1.5F).clientTrackingRange(8)
+                    .build(Jemstones.MOD_ID + ":strawberry"));
+
     public static void register(IEventBus eventBus) {
         ENTITIES.register(eventBus);
         eventBus.addListener(ModEntities::registerAttributes);
@@ -54,6 +59,7 @@ public class ModEntities {
         event.put(CARNELIAN.get(), QuartzGem.createAttributes(12.0D).build());
         event.put(AMETHYST.get(), QuartzGem.createAttributes(12.0D).build());
         event.put(MELON.get(), Pepo.createAttributes().build());
+        event.put(STRAWBERRY.get(), Pepo.createAttributes().build());
         event.put(PUMPKIN.get(), Pepo.createAttributes().build());
     }
 }

@@ -39,3 +39,7 @@ and attached-stem blocks, with original textures, foliage tint and slice-to-seed
 Wavy Pink Sandstone Stairs retain the original textures and eight-stair recipe.
 Active Gem Bases craft from nine active shards; both gem bases retain the original
 16-item stack limit. Gem machinery and inactive-base crafting remain deferred.
+
+Strawberry Head uses the original Pepo model, texture, attributes, egg colours and
+3-7 strawberry-slice death drops. Rose Quartz following and natural spawning
+remain deferred; upstream Pepo voice files are unavailable.

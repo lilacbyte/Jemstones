@@ -34,5 +34,7 @@
   "item.jemstones.strawberry_seeds": "Giant Strawberry Seeds",
   "block.jemstones.giant_strawberry_stem": "Giant Strawberry Stem",
   "block.jemstones.attached_giant_strawberry_stem": "Attached Giant Strawberry Stem",
-  "block.jemstones.wavy_pink_sandstone_stairs": "Wavy Pink Sandstone Stairs"
+  "block.jemstones.wavy_pink_sandstone_stairs": "Wavy Pink Sandstone Stairs",
+  "entity.jemstones.strawberry": "Strawberry Head",
+  "item.jemstones.strawberry_spawn_egg": "Strawberry Head Spawn Egg"
 }
