@@ -19,6 +19,8 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         simpleItem(ModItems.RUBY_GEM);
         simpleItem(ModItems.TIME_GLASS);
+        simpleItem(ModItems.TRANSFER_CONTRACT);
+        simpleItem(ModItems.LIBERATION_CONTRACT);
         simpleItem(ModItems.STRAWBERRY_SLICE);
         simpleItem(ModItems.STRAWBERRY_SEEDS);
         simpleItem(ModItems.JASPER_GEM);

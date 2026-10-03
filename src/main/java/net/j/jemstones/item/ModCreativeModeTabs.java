@@ -19,6 +19,8 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.RUBY_GEM.get());
                         output.accept(ModItems.TIME_GLASS.get());
+                        output.accept(ModItems.TRANSFER_CONTRACT.get());
+                        output.accept(ModItems.LIBERATION_CONTRACT.get());
                         output.accept(ModItems.STRAWBERRY_SLICE.get());
                         output.accept(ModItems.STRAWBERRY_SEEDS.get());
                         output.accept(ModItems.GIANT_STRAWBERRY.get());

@@ -36,5 +36,14 @@
   "block.jemstones.attached_giant_strawberry_stem": "Attached Giant Strawberry Stem",
   "block.jemstones.wavy_pink_sandstone_stairs": "Wavy Pink Sandstone Stairs",
   "entity.jemstones.strawberry": "Strawberry Head",
-  "item.jemstones.strawberry_spawn_egg": "Strawberry Head Spawn Egg"
+  "item.jemstones.strawberry_spawn_egg": "Strawberry Head Spawn Egg",
+  "item.jemstones.transfer_contract": "Transfer Ownership Contract",
+  "item.jemstones.liberation_contract": "Liberation Contract",
+  "item.jemstones.transfer_contract.signedname": "%1$s's Transfer Ownership Contract",
+  "item.jemstones.liberation_contract.signedname": "%1$s's Liberation Contract",
+  "tooltip.jemstones.contract_unsigned": "Right click a block to sign.",
+  "tooltip.jemstones.contract_signed": "Signed.",
+  "message.jemstones.contract_wrong_owner": "This gem does not belong to the signer.",
+  "message.jemstones.gem_released": "%s is now free.",
+  "message.jemstones.gem_transferred": "%s now belongs to you."
 }

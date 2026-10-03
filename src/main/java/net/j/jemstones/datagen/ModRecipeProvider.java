@@ -19,6 +19,12 @@ public class ModRecipeProvider extends RecipeProvider {
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> output) {
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.TRANSFER_CONTRACT.get())
+                .requires(Items.WRITABLE_BOOK).requires(Items.IRON_NUGGET)
+                .unlockedBy("has_writable_book", has(Items.WRITABLE_BOOK)).save(output);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.LIBERATION_CONTRACT.get())
+                .requires(ModItems.TRANSFER_CONTRACT.get()).requires(Items.GUNPOWDER)
+                .unlockedBy("has_transfer_contract", has(ModItems.TRANSFER_CONTRACT.get())).save(output);
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WAVY_PINK_SANDSTONE_STAIRS.get(), 8)
                 .pattern("s  ").pattern("ss ").pattern("sss")
                 .define('s', ModBlocks.WAVY_PINK_SANDSTONE.get())

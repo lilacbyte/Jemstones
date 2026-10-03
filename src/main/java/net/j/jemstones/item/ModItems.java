@@ -93,6 +93,11 @@ public class ModItems {
     public static final RegistryObject<Item> STRAWBERRY_SPAWN_EGG = ITEMS.register("strawberry_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntities.STRAWBERRY, 0xEF4B69, 0x80855A, new Item.Properties()));
 
+    public static final RegistryObject<Item> TRANSFER_CONTRACT = ITEMS.register("transfer_contract",
+            () -> new GemContractItem(new Item.Properties().stacksTo(1), false));
+    public static final RegistryObject<Item> LIBERATION_CONTRACT = ITEMS.register("liberation_contract",
+            () -> new GemContractItem(new Item.Properties().stacksTo(1), true));
+
     // behaviour comes later
     public static final RegistryObject<Item> ACTIVATED_GEM_SHARD = ITEMS.register("active_gem_shard",
             () -> new Item(new Item.Properties()));
