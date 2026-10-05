@@ -4,12 +4,12 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.level.Level;
 
-public class Ruby extends GemEntity {
-    public Ruby(EntityType<? extends Ruby> type, Level level) {
+public class Jasper extends QuartzGem {
+    public Jasper(EntityType<? extends Jasper> type, Level level) {
         super(type, level);
     }
 
     public static AttributeSupplier.Builder createAttributes() {
-        return createGemAttributes(80.0D, 4.0D);
+        return createQuartzAttributes(16.0D);
     }
 }

@@ -1,13 +1,11 @@
 package net.j.jemstones.item;
 
-import net.j.jemstones.entity.QuartzGem;
-import net.j.jemstones.entity.Ruby;
+import net.j.jemstones.entity.GemEntity;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -55,9 +53,8 @@ public class GemContractItem extends Item {
 
     @Override
     public InteractionResult interactLivingEntity(ItemStack stack, Player player, LivingEntity target, InteractionHand hand) {
-        if (!(target instanceof Ruby || target instanceof QuartzGem)) return InteractionResult.PASS;
+        if (!(target instanceof GemEntity gem)) return InteractionResult.PASS;
         if (player.isSpectator() || !target.isAlive() || stack.isEmpty()) return InteractionResult.FAIL;
-        TamableAnimal gem = (TamableAnimal) target;
         UUID signer = getSigner(stack);
         if (!gem.isTame() || signer == null || !signer.equals(gem.getOwnerUUID())) {
             if (!player.level().isClientSide) {

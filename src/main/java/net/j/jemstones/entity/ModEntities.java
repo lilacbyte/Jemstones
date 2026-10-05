@@ -28,18 +28,18 @@ public class ModEntities {
                     .sized(0.5F, 1.5F).clientTrackingRange(8)
                     .build(Jemstones.MOD_ID + ":pumpkin"));
 
-    public static final RegistryObject<EntityType<QuartzGem>> AMETHYST = ENTITIES.register("amethyst",
-            () -> EntityType.Builder.of(QuartzGem::new, MobCategory.CREATURE)
+    public static final RegistryObject<EntityType<Amethyst>> AMETHYST = ENTITIES.register("amethyst",
+            () -> EntityType.Builder.of(Amethyst::new, MobCategory.CREATURE)
                     .sized(0.9F, 2.3F).clientTrackingRange(8)
                     .build(Jemstones.MOD_ID + ":amethyst"));
 
-    public static final RegistryObject<EntityType<QuartzGem>> CARNELIAN = ENTITIES.register("carnelian",
-            () -> EntityType.Builder.of(QuartzGem::new, MobCategory.CREATURE)
+    public static final RegistryObject<EntityType<Carnelian>> CARNELIAN = ENTITIES.register("carnelian",
+            () -> EntityType.Builder.of(Carnelian::new, MobCategory.CREATURE)
                     .sized(0.9F, 2.3F).fireImmune().clientTrackingRange(8)
                     .build(Jemstones.MOD_ID + ":carnelian"));
 
-    public static final RegistryObject<EntityType<QuartzGem>> JASPER = ENTITIES.register("jasper",
-            () -> EntityType.Builder.of(QuartzGem::new, MobCategory.CREATURE)
+    public static final RegistryObject<EntityType<Jasper>> JASPER = ENTITIES.register("jasper",
+            () -> EntityType.Builder.of(Jasper::new, MobCategory.CREATURE)
                     .sized(0.9F, 2.3F).clientTrackingRange(8)
                     .build(Jemstones.MOD_ID + ":jasper"));
 
@@ -55,9 +55,9 @@ public class ModEntities {
 
     private static void registerAttributes(EntityAttributeCreationEvent event) {
         event.put(RUBY.get(), Ruby.createAttributes().build());
-        event.put(JASPER.get(), QuartzGem.createAttributes(16.0D).build());
-        event.put(CARNELIAN.get(), QuartzGem.createAttributes(12.0D).build());
-        event.put(AMETHYST.get(), QuartzGem.createAttributes(12.0D).build());
+        event.put(JASPER.get(), Jasper.createAttributes().build());
+        event.put(CARNELIAN.get(), Carnelian.createAttributes().build());
+        event.put(AMETHYST.get(), Amethyst.createAttributes().build());
         event.put(MELON.get(), Pepo.createAttributes().build());
         event.put(STRAWBERRY.get(), Pepo.createAttributes().build());
         event.put(PUMPKIN.get(), Pepo.createAttributes().build());

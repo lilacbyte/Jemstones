@@ -47,3 +47,7 @@ remain deferred; upstream Pepo voice files are unavailable.
 Transfer and Liberation Contracts retain original textures, recipes and signing.
 Owner-signed contracts transfer or release the currently ported Ruby and Quartz gems.
 Joint owners, faction servitude and contract voice responses remain deferred.
+
+GemEntity now holds shared movement, targeting and ownership behaviour. Ruby has
+its own class; Amethyst, Carnelian and Jasper extend the shared QuartzGem soldier
+base, following KAGIC's entity hierarchy. Existing registry IDs are unchanged.

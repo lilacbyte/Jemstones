@@ -14,9 +14,9 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.gameevent.GameEvent;
 
 public class QuartzGemItem extends Item {
-    private final Supplier<EntityType<QuartzGem>> entityType;
+    private final Supplier<? extends EntityType<? extends QuartzGem>> entityType;
 
-    public QuartzGemItem(Supplier<EntityType<QuartzGem>> entityType, Properties properties) {
+    public QuartzGemItem(Supplier<? extends EntityType<? extends QuartzGem>> entityType, Properties properties) {
         super(properties);
         this.entityType = entityType;
     }
