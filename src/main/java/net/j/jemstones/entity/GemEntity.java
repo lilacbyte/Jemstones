@@ -1,6 +1,7 @@
 package net.j.jemstones.entity;
 
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -17,6 +18,8 @@ import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 
 public abstract class GemEntity extends TamableAnimal {
+    private boolean peaceful;
+
     protected GemEntity(EntityType<? extends GemEntity> type, Level level) {
         super(type, level);
         setPersistenceRequired();
@@ -45,6 +48,31 @@ public abstract class GemEntity extends TamableAnimal {
         targetSelector.addGoal(3, new HurtByTargetGoal(this));
         targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, Monster.class,
                 10, true, false, target -> !(target instanceof Creeper)));
+    }
+
+    public void calm() {
+        setTarget(null);
+        setLastHurtByMob(null);
+        peaceful = true;
+    }
+
+    @Override
+    public void aiStep() {
+        if (!level().isClientSide && peaceful) {
+            setTarget(null);
+            peaceful = false;
+        }
+        super.aiStep();
+    }
+
+    @Override
+    public boolean hurt(DamageSource source, float amount) {
+        // the original staff also cancels one hit before the next living tick
+        if (!level().isClientSide && isAlive() && peaceful) {
+            peaceful = false;
+            return false;
+        }
+        return super.hurt(source, amount);
     }
 
     @Override

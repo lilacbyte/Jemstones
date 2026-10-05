@@ -51,3 +51,7 @@ Joint owners, faction servitude and contract voice responses remain deferred.
 GemEntity now holds shared movement, targeting and ownership behaviour. Ruby has
 its own class; Amethyst, Carnelian and Jasper extend the shared QuartzGem soldier
 base, following KAGIC's entity hierarchy. Existing registry IDs are unchanged.
+
+The Gem Staff uses its original recipe, texture and nearby combat reset across
+all GemEntity subclasses, including the original brief single-hit protection.
+It does not permanently pacify gems or change ownership.

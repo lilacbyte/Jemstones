@@ -19,6 +19,10 @@ public class ModRecipeProvider extends RecipeProvider {
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> output) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.GEM_STAFF.get())
+                .pattern("  d").pattern(" b ").pattern("b  ")
+                .define('b', Items.BLAZE_ROD).define('d', Items.DIAMOND)
+                .unlockedBy("has_blaze_rod", has(Items.BLAZE_ROD)).save(output);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.TRANSFER_CONTRACT.get())
                 .requires(Items.WRITABLE_BOOK).requires(Items.IRON_NUGGET)
                 .unlockedBy("has_writable_book", has(Items.WRITABLE_BOOK)).save(output);

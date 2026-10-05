@@ -45,5 +45,6 @@
   "tooltip.jemstones.contract_signed": "Signed.",
   "message.jemstones.contract_wrong_owner": "This gem does not belong to the signer.",
   "message.jemstones.gem_released": "%s is now free.",
-  "message.jemstones.gem_transferred": "%s now belongs to you."
+  "message.jemstones.gem_transferred": "%s now belongs to you.",
+  "item.jemstones.gem_staff": "Gem Staff"
 }

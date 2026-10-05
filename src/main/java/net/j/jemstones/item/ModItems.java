@@ -98,6 +98,9 @@ public class ModItems {
     public static final RegistryObject<Item> LIBERATION_CONTRACT = ITEMS.register("liberation_contract",
             () -> new GemContractItem(new Item.Properties().stacksTo(1), true));
 
+    public static final RegistryObject<Item> GEM_STAFF = ITEMS.register("gem_staff",
+            () -> new GemStaffItem(new Item.Properties().stacksTo(1)));
+
     // behaviour comes later
     public static final RegistryObject<Item> ACTIVATED_GEM_SHARD = ITEMS.register("active_gem_shard",
             () -> new Item(new Item.Properties()));
