@@ -31,6 +31,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.AMETHYST_GEM.get());
                         output.accept(ModItems.MELON_SPAWN_EGG.get());
                         output.accept(ModItems.STRAWBERRY_SPAWN_EGG.get());
+                        output.accept(ModItems.CACTUS_SPAWN_EGG.get());
                         output.accept(ModItems.PUMPKIN_SPAWN_EGG.get());
                         output.accept(ModItems.ACTIVATED_GEM_SHARD.get());
                         output.accept(ModItems.ACTIVATED_GEM_BASE.get());

@@ -46,5 +46,7 @@
   "message.jemstones.contract_wrong_owner": "This gem does not belong to the signer.",
   "message.jemstones.gem_released": "%s is now free.",
   "message.jemstones.gem_transferred": "%s now belongs to you.",
-  "item.jemstones.gem_staff": "Gem Staff"
+  "item.jemstones.gem_staff": "Gem Staff",
+  "entity.jemstones.cactus": "Cactus Head",
+  "item.jemstones.cactus_spawn_egg": "Cactus Head Spawn Egg"
 }

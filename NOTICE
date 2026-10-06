@@ -55,3 +55,7 @@ base, following KAGIC's entity hierarchy. Existing registry IDs are unchanged.
 The Gem Staff uses its original recipe, texture and nearby combat reset across
 all GemEntity subclasses, including the original brief single-hit protection.
 It does not permanently pacify gems or change ownership.
+
+Cactus Head uses the original Pepo appearance, attributes and egg colours,
+reflects one point of cactus damage to attackers, and drops one cactus on death.
+Rose Quartz following, natural spawning and missing Pepo voices remain deferred.

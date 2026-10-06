@@ -101,6 +101,9 @@ public class ModItems {
     public static final RegistryObject<Item> GEM_STAFF = ITEMS.register("gem_staff",
             () -> new GemStaffItem(new Item.Properties().stacksTo(1)));
 
+    public static final RegistryObject<Item> CACTUS_SPAWN_EGG = ITEMS.register("cactus_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.CACTUS, 0x138622, 0xD9DB9F, new Item.Properties()));
+
     // behaviour comes later
     public static final RegistryObject<Item> ACTIVATED_GEM_SHARD = ITEMS.register("active_gem_shard",
             () -> new Item(new Item.Properties()));
