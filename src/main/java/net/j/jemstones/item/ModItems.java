@@ -81,6 +81,13 @@ public class ModItems {
 
     public static final RegistryObject<Item> GIANT_STRAWBERRY = ITEMS.register("giant_strawberry_block",
             () -> new BlockItem(ModBlocks.GIANT_STRAWBERRY.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> ROCK_MELT = ITEMS.register("rock_melt",
+            () -> new BlockItem(ModBlocks.ROCK_MELT.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> RUTILE_TRAIL = ITEMS.register("rutile_trail",
+            () -> new BlockItem(ModBlocks.RUTILE_TRAIL.get(), new Item.Properties()));
+
     public static final RegistryObject<Item> DRAINED_GRAVEL = ITEMS.register("drained_gravel",
             () -> new BlockItem(ModBlocks.DRAINED_GRAVEL.get(), new Item.Properties()));
 

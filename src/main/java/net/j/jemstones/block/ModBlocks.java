@@ -85,6 +85,14 @@ public class ModBlocks {
             () -> new StairBlock(() -> WAVY_PINK_SANDSTONE.get().defaultBlockState(),
                     BlockBehaviour.Properties.copy(WAVY_PINK_SANDSTONE.get())));
 
+    public static final RegistryObject<RockMeltBlock> ROCK_MELT = BLOCKS.register("rock_melt",
+            () -> new RockMeltBlock(BlockBehaviour.Properties.of().mapColor(MapColor.GOLD)
+                    .noCollission().noOcclusion().replaceable().lightLevel(state -> 15)));
+
+    public static final RegistryObject<RockMeltBlock> RUTILE_TRAIL = BLOCKS.register("rutile_trail",
+            () -> new RockMeltBlock(BlockBehaviour.Properties.of().mapColor(MapColor.GOLD)
+                    .noCollission().noOcclusion().replaceable().lightLevel(state -> 15)));
+
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
     }

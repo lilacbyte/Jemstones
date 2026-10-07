@@ -59,3 +59,8 @@ It does not permanently pacify gems or change ownership.
 Cactus Head uses the original Pepo appearance, attributes and egg colours,
 reflects one point of cactus damage to attackers, and drops one cactus on death.
 Rose Quartz following, natural spawning and missing Pepo voices remain deferred.
+
+Frictional Rock Melt and Rutile Trail retain the original texture, light,
+empty selection and collision bounds, replaceability and opaque support rule.
+Rock melt drops blaze powder; trail and support removal drop nothing.
+Rutile Trail remains hidden from the creative tab. Rutile placement is deferred.

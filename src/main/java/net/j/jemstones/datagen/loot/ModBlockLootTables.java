@@ -2,6 +2,7 @@ package net.j.jemstones.datagen.loot;
 
 import net.j.jemstones.block.ModBlocks;
 import net.j.jemstones.item.ModItems;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
@@ -32,6 +33,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
+        dropOther(ModBlocks.ROCK_MELT.get(), Items.BLAZE_POWDER);
+        add(ModBlocks.RUTILE_TRAIL.get(), noDrop());
         dropSelf(ModBlocks.WAVY_PINK_SANDSTONE_STAIRS.get());
         add(ModBlocks.GIANT_STRAWBERRY_STEM.get(), block -> createStemDrops(block, ModItems.STRAWBERRY_SEEDS.get()));
         add(ModBlocks.ATTACHED_GIANT_STRAWBERRY_STEM.get(), block -> createAttachedStemDrops(block, ModItems.STRAWBERRY_SEEDS.get()));

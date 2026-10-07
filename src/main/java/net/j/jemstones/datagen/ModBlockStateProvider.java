@@ -16,6 +16,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+        simpleBlockWithItem(ModBlocks.ROCK_MELT.get(), models().carpet("rock_melt",
+                modLoc("block/rock_melt")).renderType("translucent"));
+        simpleBlockWithItem(ModBlocks.RUTILE_TRAIL.get(), models().carpet("rutile_trail",
+                modLoc("block/rock_melt")).renderType("translucent"));
         stairsBlock(ModBlocks.WAVY_PINK_SANDSTONE_STAIRS.get(), modLoc("block/pink_sandstone_wavy"),
                 modLoc("block/pink_sandstone_bottom"), modLoc("block/pink_sandstone_top"));
         simpleBlockItem(ModBlocks.WAVY_PINK_SANDSTONE_STAIRS.get(),
