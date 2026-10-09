@@ -82,6 +82,9 @@ public class ModItems {
     public static final RegistryObject<Item> GIANT_STRAWBERRY = ITEMS.register("giant_strawberry_block",
             () -> new BlockItem(ModBlocks.GIANT_STRAWBERRY.get(), new Item.Properties()));
 
+    public static final RegistryObject<Item> MOON_GODDESS_STATUE = ITEMS.register("moon_goddess_statue",
+            () -> new BlockItem(ModBlocks.MOON_GODDESS_STATUE.get(), new Item.Properties()));
+
     public static final RegistryObject<Item> ROCK_MELT = ITEMS.register("rock_melt",
             () -> new BlockItem(ModBlocks.ROCK_MELT.get(), new Item.Properties()));
 

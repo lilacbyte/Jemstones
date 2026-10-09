@@ -93,6 +93,11 @@ public class ModBlocks {
             () -> new RockMeltBlock(BlockBehaviour.Properties.of().mapColor(MapColor.GOLD)
                     .noCollission().noOcclusion().replaceable().lightLevel(state -> 15)));
 
+    public static final RegistryObject<MoonGoddessStatueBlock> MOON_GODDESS_STATUE = BLOCKS.register("moon_goddess_statue",
+            () -> new MoonGoddessStatueBlock(BlockBehaviour.Properties.of().mapColor(MapColor.DIAMOND)
+                    .strength(0.8F, 2.4F).noOcclusion().pushReaction(PushReaction.DESTROY)
+                    .lightLevel(state -> state.getValue(MoonGoddessStatueBlock.LIGHT))));
+
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
     }

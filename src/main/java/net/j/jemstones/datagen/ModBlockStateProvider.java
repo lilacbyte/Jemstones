@@ -2,8 +2,10 @@ package net.j.jemstones.datagen;
 
 import net.j.jemstones.Jemstones;
 import net.j.jemstones.block.ModBlocks;
+import net.j.jemstones.block.MoonGoddessStatueBlock;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.StemBlock;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.AttachedStemBlock;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
@@ -16,6 +18,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+        getVariantBuilder(ModBlocks.MOON_GODDESS_STATUE.get()).forAllStatesExcept(state ->
+                ConfiguredModel.builder().modelFile(models().getExistingFile(modLoc("block/moon_goddess_statue")))
+                        .rotationY((int) state.getValue(HorizontalDirectionalBlock.FACING).toYRot())
+                        .build(), MoonGoddessStatueBlock.LIGHT);
+        simpleBlockItem(ModBlocks.MOON_GODDESS_STATUE.get(),
+                models().getExistingFile(modLoc("block/moon_goddess_statue")));
         simpleBlockWithItem(ModBlocks.ROCK_MELT.get(), models().carpet("rock_melt",
                 modLoc("block/rock_melt")).renderType("translucent"));
         simpleBlockWithItem(ModBlocks.RUTILE_TRAIL.get(), models().carpet("rutile_trail",

@@ -27,6 +27,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.GIANT_STRAWBERRY.get());
                         output.accept(ModItems.DRAINED_GRAVEL.get());
                         output.accept(ModItems.ROCK_MELT.get());
+                        output.accept(ModItems.MOON_GODDESS_STATUE.get());
                         output.accept(ModItems.JASPER_GEM.get());
                         output.accept(ModItems.CARNELIAN_GEM.get());
                         output.accept(ModItems.AMETHYST_GEM.get());

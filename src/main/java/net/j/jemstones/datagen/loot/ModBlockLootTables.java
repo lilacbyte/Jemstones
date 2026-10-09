@@ -33,6 +33,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
+        dropSelf(ModBlocks.MOON_GODDESS_STATUE.get());
         dropOther(ModBlocks.ROCK_MELT.get(), Items.BLAZE_POWDER);
         add(ModBlocks.RUTILE_TRAIL.get(), noDrop());
         dropSelf(ModBlocks.WAVY_PINK_SANDSTONE_STAIRS.get());
