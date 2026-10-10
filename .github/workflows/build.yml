@@ -1,4 +1,4 @@
-name: build 1.20.1
+name: build and release 1.20.1
 
 on:
   push:
@@ -37,3 +37,45 @@ jobs:
             !build/libs/*-dev.jar
             !build/libs/*-javadoc.jar
           if-no-files-found: error
+
+  release:
+    needs: build
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    concurrency:
+      group: release-${{ github.sha }}
+      cancel-in-progress: false
+    steps:
+      - name: download built mod
+        uses: actions/download-artifact@v8
+        with:
+          name: jemstones-forge-1.20.1
+          path: release
+      - name: publish commit release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          jars=(release/jemstones-*-1.20.1.jar)
+          if [[ ${#jars[@]} -ne 1 ]]; then
+            echo 'expected exactly one mod jar' >&2
+            exit 1
+          fi
+          jar="${jars[0]}"
+          title="${jar##*/}"
+          tag="build-${GITHUB_SHA}"
+          if gh release view "$tag" >/dev/null 2>&1; then
+            gh release upload "$tag" "$jar" --clobber
+          else
+            printf 'automatic Forge 1.20.1 build from commit %s\nrequires Java 17\n' "$GITHUB_SHA" > release-notes.txt
+            gh release create "$tag" "$jar" \
+              --target "$GITHUB_SHA" \
+              --title "${title%.jar}" \
+              --notes-file release-notes.txt
+          fi
