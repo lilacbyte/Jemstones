@@ -19,6 +19,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         simpleItem(ModItems.RUBY_GEM);
         simpleItem(ModItems.TIME_GLASS);
+        withExistingParent("commander_staff", mcLoc("item/handheld")).texture("layer0", modLoc("item/commander_staff"));
         withExistingParent("gem_staff", mcLoc("item/handheld")).texture("layer0", modLoc("item/gem_staff"));
         simpleItem(ModItems.TRANSFER_CONTRACT);
         simpleItem(ModItems.LIBERATION_CONTRACT);

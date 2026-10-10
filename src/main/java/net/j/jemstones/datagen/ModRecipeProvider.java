@@ -19,6 +19,10 @@ public class ModRecipeProvider extends RecipeProvider {
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> output) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.COMMANDER_STAFF.get())
+                .pattern("  p").pattern(" n ").pattern("n  ")
+                .define('n', Items.IRON_NUGGET).define('p', Items.ENDER_PEARL)
+                .unlockedBy("has_ender_pearl", has(Items.ENDER_PEARL)).save(output);
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.GEM_STAFF.get())
                 .pattern("  d").pattern(" b ").pattern("b  ")
                 .define('b', Items.BLAZE_ROD).define('d', Items.DIAMOND)

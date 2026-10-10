@@ -1,5 +1,6 @@
 package net.j.jemstones.entity;
 
+import net.j.jemstones.item.CommanderStaffItem;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.AgeableMob;
@@ -48,6 +49,20 @@ public abstract class GemEntity extends TamableAnimal {
         targetSelector.addGoal(3, new HurtByTargetGoal(this));
         targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, Monster.class,
                 10, true, false, target -> !(target instanceof Creeper)));
+    }
+
+    @Override
+    public boolean isOwnedBy(LivingEntity entity) {
+        if (entity == null || !isTame() || getOwnerUUID() == null) return false;
+        if (entity instanceof Player && getOwnerUUID().equals(entity.getUUID())) return true;
+        ItemStack stack = entity.getMainHandItem();
+        return stack.getItem() instanceof CommanderStaffItem staff
+                && getOwnerUUID().equals(staff.getOwner(stack));
+    }
+
+    @Override
+    public boolean canBeLeashed(Player player) {
+        return isTame() && isOwnedBy(player) && !isLeashed();
     }
 
     public void calm() {

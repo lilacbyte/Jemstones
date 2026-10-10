@@ -20,6 +20,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.RUBY_GEM.get());
                         output.accept(ModItems.TIME_GLASS.get());
                         output.accept(ModItems.GEM_STAFF.get());
+                        output.accept(ModItems.COMMANDER_STAFF.get());
                         output.accept(ModItems.TRANSFER_CONTRACT.get());
                         output.accept(ModItems.LIBERATION_CONTRACT.get());
                         output.accept(ModItems.STRAWBERRY_SLICE.get());

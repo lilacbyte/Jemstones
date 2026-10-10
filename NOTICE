@@ -69,3 +69,8 @@ moon goddess statue uses KAGIC's original model, facing bounds, full-moon light
 curve and sky-visible midnight night vision (20 seconds, amplifier 1).
 scheduled server ticks and a light blockstate replace the old tile entity.
 the decorative beam renderer remains deferred.
+
+commander staff retains its original texture, recipe, binding and signed name.
+gems recognize the main-hand bearer of their owner's staff for attack protection
+and owner-authorized leashing without changing their saved owner.
+squad commands, gem-held staffs and joint-owner authority remain deferred.
