@@ -1,0 +1,221 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#forge:gems/agate",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/alexandrite",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/amber",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/amethyst",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/ametrine",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/ammolite",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/apatite",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/aquamarine",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/beryl",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/black_diamond",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/blue_topaz",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/carnelian",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/cats_eye",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/chrysoprase",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/citrine",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/coral",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/diamond",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/emerald",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/fluorite",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/garnet",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/golden_beryl",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/heliodor",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/indicolite",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/iolite",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/jade",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/jasper",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/kunzite",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/kyanite",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/lapis",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/lepidolite",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/malachite",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/moldavite",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/moonstone",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/morganite",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/onyx",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/opal",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/pearl",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/peridot",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/prismarine",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/pyrope",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/quartz",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/rose_quartz",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/ruby",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/rutile",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/sapphire",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/spinel",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/sodalite",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/sunstone",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/tanzanite",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/tektite",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/topaz",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/turquoise",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/violet_sapphire",
+      "required": false
+    },
+    {
+      "id": "#forge:gems/zircon",
+      "required": false
+    }
+  ]
+}

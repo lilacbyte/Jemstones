@@ -74,3 +74,8 @@ commander staff retains its original texture, recipe, binding and signed name.
 gems recognize the main-hand bearer of their owner's staff for attack protection
 and owner-authorized leashing without changing their saved owner.
 squad commands, gem-held staffs and joint-owner authority remain deferred.
+
+inactive gem base crafting retains the original pattern and ingredient list.
+the 54 named ore-dictionary gem choices map to optional forge:gems item tags
+through jemstones:inactive_gem_base_gems; other gem types are not accepted.
+injectors and gem incubation remain deferred.

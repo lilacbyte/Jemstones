@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "e": {
+      "tag": "jemstones:inactive_gem_base_gems"
+    },
+    "g": {
+      "item": "minecraft:glowstone_dust"
+    },
+    "p": {
+      "item": "minecraft:blaze_powder"
+    },
+    "r": {
+      "item": "minecraft:redstone"
+    },
+    "s": {
+      "item": "minecraft:soul_sand"
+    }
+  },
+  "pattern": [
+    "psp",
+    "grg",
+    "pep"
+  ],
+  "result": {
+    "item": "jemstones:inactive_gem_base"
+  },
+  "show_notification": true
+}

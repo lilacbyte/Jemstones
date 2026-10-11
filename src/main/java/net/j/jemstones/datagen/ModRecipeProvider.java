@@ -9,6 +9,8 @@ import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.world.item.Items;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.resources.ResourceLocation;
 
 import java.util.function.Consumer;
 
@@ -19,6 +21,14 @@ public class ModRecipeProvider extends RecipeProvider {
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> output) {
+        var baseGems = ItemTags.create(new ResourceLocation("jemstones", "inactive_gem_base_gems"));
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.INACTIVE_GEM_BASE.get())
+                .pattern("psp").pattern("grg").pattern("pep")
+                .define('p', Items.BLAZE_POWDER).define('s', Items.SOUL_SAND)
+                .define('g', Items.GLOWSTONE_DUST).define('r', Items.REDSTONE)
+                .define('e', baseGems)
+                .unlockedBy("has_base_gem", has(baseGems)).save(output);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.COMMANDER_STAFF.get())
                 .pattern("  p").pattern(" n ").pattern("n  ")
                 .define('n', Items.IRON_NUGGET).define('p', Items.ENDER_PEARL)
