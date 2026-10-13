@@ -47,6 +47,7 @@
   "tooltip.jemstones.contract_unsigned": "Right click a block to sign.",
   "tooltip.jemstones.contract_signed": "Signed.",
   "message.jemstones.contract_wrong_owner": "This gem does not belong to the signer.",
+  "message.jemstones.gem_tamed": "%s now serves you.",
   "message.jemstones.gem_released": "%s is now free.",
   "message.jemstones.gem_transferred": "%s now belongs to you.",
   "item.jemstones.commander_staff": "Commander Staff",

@@ -9,6 +9,7 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.LivingEntityRenderer;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.client.renderer.entity.layers.RenderLayer;
+import net.minecraft.client.renderer.entity.layers.ItemInHandLayer;
 import net.minecraft.resources.ResourceLocation;
 
 public class QuartzGemRenderer extends MobRenderer<QuartzGem, QuartzGemModel> {
@@ -17,6 +18,7 @@ public class QuartzGemRenderer extends MobRenderer<QuartzGem, QuartzGemModel> {
     public QuartzGemRenderer(EntityRendererProvider.Context context, String kind, int skin, int hair,
                              int uniform, int gemColor, boolean markings) {
         super(context, new QuartzGemModel(context.bakeLayer(QuartzGemModel.LAYER)), 0.5F);
+        addLayer(new ItemInHandLayer<>(this, context.getItemInHandRenderer()));
         this.kind = kind;
         // one original look for now
         addLayer(new TextureLayer(this, "skin", skin));

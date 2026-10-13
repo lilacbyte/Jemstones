@@ -1,6 +1,10 @@
 package net.j.jemstones.entity;
 
 import net.j.jemstones.item.CommanderStaffItem;
+import net.j.jemstones.item.ModItems;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.AgeableMob;
@@ -63,6 +67,43 @@ public abstract class GemEntity extends TamableAnimal {
     @Override
     public boolean canBeLeashed(Player player) {
         return isTame() && isOwnedBy(player) && !isLeashed();
+    }
+
+    @Override
+    public InteractionResult mobInteract(Player player, InteractionHand hand) {
+        ItemStack stack = player.getItemInHand(hand);
+        boolean gemStaff = stack.is(ModItems.GEM_STAFF.get());
+        boolean commanderStaff = stack.is(ModItems.COMMANDER_STAFF.get());
+        if (!gemStaff && !commanderStaff) return super.mobInteract(player, hand);
+        if (player.isSpectator() || !isAlive()) return InteractionResult.FAIL;
+        if (hand == InteractionHand.MAIN_HAND && !isTame() && gemStaff) {
+            if (!level().isClientSide) {
+                tame(player);
+                getNavigation().stop();
+                setTarget(null);
+                setLastHurtByMob(null);
+                setHealth(getMaxHealth());
+                level().broadcastEntityEvent(this, (byte) 7);
+                player.displayClientMessage(Component.translatable("message.jemstones.gem_tamed", getName()), true);
+            }
+            return InteractionResult.sidedSuccess(level().isClientSide);
+        }
+        if (!isTame() || !isOwnedBy(player)) return InteractionResult.FAIL;
+        if (hand == InteractionHand.OFF_HAND && commanderStaff && getMainHandItem().isEmpty()) {
+            if (!level().isClientSide) {
+                setItemInHand(InteractionHand.MAIN_HAND, stack.copy());
+                if (!player.getAbilities().instabuild) stack.shrink(1);
+            }
+            return InteractionResult.sidedSuccess(level().isClientSide);
+        }
+        if (hand == InteractionHand.MAIN_HAND && player.isShiftKeyDown()) {
+            if (!level().isClientSide && !getMainHandItem().isEmpty()) {
+                spawnAtLocation(getMainHandItem().copy());
+                setItemInHand(InteractionHand.MAIN_HAND, ItemStack.EMPTY);
+            }
+            return InteractionResult.sidedSuccess(level().isClientSide);
+        }
+        return super.mobInteract(player, hand);
     }
 
     public void calm() {

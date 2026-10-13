@@ -9,11 +9,13 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.LivingEntityRenderer;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.client.renderer.entity.layers.RenderLayer;
+import net.minecraft.client.renderer.entity.layers.ItemInHandLayer;
 import net.minecraft.resources.ResourceLocation;
 
 public class RubyRenderer extends MobRenderer<Ruby, RubyModel> {
     public RubyRenderer(EntityRendererProvider.Context context) {
         super(context, new RubyModel(context.bakeLayer(RubyModel.LAYER)), 0.3F);
+        addLayer(new ItemInHandLayer<>(this, context.getItemInHandRenderer()));
         // one original look for now
         addLayer(new TextureLayer(this, "skin", 0xE52C5C));
         addLayer(new TextureLayer(this, "uniform", 0x993333));
