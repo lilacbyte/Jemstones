@@ -23,6 +23,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("gem_staff", mcLoc("item/handheld")).texture("layer0", modLoc("item/gem_staff"));
         simpleItem(ModItems.TRANSFER_CONTRACT);
         simpleItem(ModItems.LIBERATION_CONTRACT);
+        simpleItem(ModItems.AUTONOMY_CONTRACT);
         simpleItem(ModItems.STRAWBERRY_SLICE);
         simpleItem(ModItems.STRAWBERRY_SEEDS);
         simpleItem(ModItems.JASPER_GEM);

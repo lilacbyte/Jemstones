@@ -21,6 +21,9 @@ public class ModRecipeProvider extends RecipeProvider {
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> output) {
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.AUTONOMY_CONTRACT.get())
+                .requires(ModItems.LIBERATION_CONTRACT.get()).requires(Items.REDSTONE)
+                .unlockedBy("has_liberation_contract", has(ModItems.LIBERATION_CONTRACT.get())).save(output);
         var baseGems = ItemTags.create(new ResourceLocation("jemstones", "inactive_gem_base_gems"));
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.INACTIVE_GEM_BASE.get())
                 .pattern("psp").pattern("grg").pattern("pep")

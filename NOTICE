@@ -85,3 +85,8 @@ owned gems accept an offhand commander staff into an empty main hand, and
 sneaking owners can recover held items with either staff, following KAGIC.
 held items use the existing humanoid hand renderer; client alignment is unverified.
 follow/stay commands and gem-led squads remain deferred.
+
+autonomy contracts retain the original texture, recipe and signing behavior.
+owner-signed contracts make ported gems serve themselves: no player owner,
+no owner following and no staff retaming, including after saving and loading.
+joint-owner and faction servitude systems remain deferred.

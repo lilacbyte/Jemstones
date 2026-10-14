@@ -3,6 +3,7 @@ package net.j.jemstones.entity;
 import net.j.jemstones.item.CommanderStaffItem;
 import net.j.jemstones.item.ModItems;
 import net.minecraft.network.chat.Component;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.server.level.ServerLevel;
@@ -24,6 +25,7 @@ import org.jetbrains.annotations.Nullable;
 
 public abstract class GemEntity extends TamableAnimal {
     private boolean peaceful;
+    private boolean autonomous;
 
     protected GemEntity(EntityType<? extends GemEntity> type, Level level) {
         super(type, level);
@@ -104,6 +106,25 @@ public abstract class GemEntity extends TamableAnimal {
             return InteractionResult.sidedSuccess(level().isClientSide);
         }
         return super.mobInteract(player, hand);
+    }
+
+    public void grantAutonomy() {
+        autonomous = true;
+        setOwnerUUID(null);
+        setTame(true);
+    }
+
+    @Override
+    public void addAdditionalSaveData(CompoundTag tag) {
+        super.addAdditionalSaveData(tag);
+        tag.putBoolean("Autonomous", autonomous);
+    }
+
+    @Override
+    public void readAdditionalSaveData(CompoundTag tag) {
+        super.readAdditionalSaveData(tag);
+        autonomous = tag.getBoolean("Autonomous");
+        if (autonomous) grantAutonomy();
     }
 
     public void calm() {

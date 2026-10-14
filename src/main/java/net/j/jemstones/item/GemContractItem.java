@@ -18,11 +18,15 @@ import java.util.List;
 import java.util.UUID;
 
 public class GemContractItem extends Item {
-    private final boolean liberation;
+    public enum Action {
+        TRANSFER, LIBERATION, AUTONOMY
+    }
 
-    public GemContractItem(Properties properties, boolean liberation) {
+    private final Action action;
+
+    public GemContractItem(Properties properties, Action action) {
         super(properties);
-        this.liberation = liberation;
+        this.action = action;
     }
 
     @Nullable
@@ -63,15 +67,23 @@ public class GemContractItem extends Item {
             return InteractionResult.FAIL;
         }
         if (!player.level().isClientSide) {
-            if (!liberation && player.getUUID().equals(gem.getOwnerUUID())) return InteractionResult.CONSUME;
-            gem.setOwnerUUID(liberation ? null : player.getUUID());
-            gem.setTame(!liberation);
+            if (action == Action.TRANSFER && player.getUUID().equals(gem.getOwnerUUID())) return InteractionResult.CONSUME;
+            if (action == Action.AUTONOMY) {
+                gem.grantAutonomy();
+            } else {
+                gem.setOwnerUUID(action == Action.LIBERATION ? null : player.getUUID());
+                gem.setTame(action == Action.TRANSFER);
+            }
             gem.setTarget(null);
             gem.setLastHurtByMob(null);
             gem.getNavigation().stop();
             if (!player.getAbilities().instabuild) stack.shrink(1);
-            player.displayClientMessage(Component.translatable(liberation
-                    ? "message.jemstones.gem_released" : "message.jemstones.gem_transferred", gem.getName()), true);
+            String message = switch (action) {
+                case TRANSFER -> "message.jemstones.gem_transferred";
+                case LIBERATION -> "message.jemstones.gem_released";
+                case AUTONOMY -> "message.jemstones.gem_autonomous";
+            };
+            player.displayClientMessage(Component.translatable(message, gem.getName()), true);
         }
         return InteractionResult.sidedSuccess(player.level().isClientSide);
     }

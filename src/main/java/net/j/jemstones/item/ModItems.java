@@ -104,9 +104,12 @@ public class ModItems {
             () -> new ForgeSpawnEggItem(ModEntities.STRAWBERRY, 0xEF4B69, 0x80855A, new Item.Properties()));
 
     public static final RegistryObject<Item> TRANSFER_CONTRACT = ITEMS.register("transfer_contract",
-            () -> new GemContractItem(new Item.Properties().stacksTo(1), false));
+            () -> new GemContractItem(new Item.Properties().stacksTo(1), GemContractItem.Action.TRANSFER));
     public static final RegistryObject<Item> LIBERATION_CONTRACT = ITEMS.register("liberation_contract",
-            () -> new GemContractItem(new Item.Properties().stacksTo(1), true));
+            () -> new GemContractItem(new Item.Properties().stacksTo(1), GemContractItem.Action.LIBERATION));
+
+    public static final RegistryObject<Item> AUTONOMY_CONTRACT = ITEMS.register("autonomy_contract",
+            () -> new GemContractItem(new Item.Properties().stacksTo(1), GemContractItem.Action.AUTONOMY));
 
     public static final RegistryObject<Item> COMMANDER_STAFF = ITEMS.register("commander_staff",
             () -> new CommanderStaffItem(new Item.Properties().stacksTo(1)));
