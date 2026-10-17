@@ -60,6 +60,9 @@ public class ModItems {
     public static final RegistryObject<Item> CARNELIAN_GEM = ITEMS.register("carnelian_gem",
             () -> new QuartzGemItem(ModEntities.CARNELIAN, new Item.Properties().stacksTo(1)));
 
+    public static final RegistryObject<Item> ROSE_QUARTZ_GEM = ITEMS.register("rose_quartz_gem",
+            () -> new QuartzGemItem(ModEntities.ROSE_QUARTZ, new Item.Properties().stacksTo(1)));
+
     public static final RegistryObject<Item> JASPER_GEM = ITEMS.register("jasper_gem",
             () -> new QuartzGemItem(ModEntities.JASPER, new Item.Properties().stacksTo(1)));
 

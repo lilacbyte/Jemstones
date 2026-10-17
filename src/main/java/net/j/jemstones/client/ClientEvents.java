@@ -36,6 +36,8 @@ public class ClientEvents {
                 new QuartzGemRenderer(context, "carnelian", 0xE1764D, 0xF24807, 0x993333, 0xFF2D5D, false));
         event.registerEntityRenderer(ModEntities.AMETHYST.get(), context ->
                 new QuartzGemRenderer(context, "amethyst", 0xB899CA, 0xF9E4FF, 0x999999, 0xDC64FD, false));
+        event.registerEntityRenderer(ModEntities.ROSE_QUARTZ.get(), context ->
+                new QuartzGemRenderer(context, "rose_quartz", 0xFDDAC9, 0xFDAECB, 0xB24CD8, 0xFFA2E6, false));
         event.registerEntityRenderer(ModEntities.MELON.get(), MelonRenderer::new);
         event.registerEntityRenderer(ModEntities.STRAWBERRY.get(), StrawberryRenderer::new);
         event.registerEntityRenderer(ModEntities.CACTUS.get(), CactusRenderer::new);

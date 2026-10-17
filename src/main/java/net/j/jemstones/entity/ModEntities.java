@@ -43,6 +43,11 @@ public class ModEntities {
                     .sized(0.9F, 2.3F).clientTrackingRange(8)
                     .build(Jemstones.MOD_ID + ":jasper"));
 
+    public static final RegistryObject<EntityType<RoseQuartz>> ROSE_QUARTZ = ENTITIES.register("rose_quartz",
+            () -> EntityType.Builder.of(RoseQuartz::new, MobCategory.CREATURE)
+                    .sized(0.9F, 2.3F).clientTrackingRange(8)
+                    .build(Jemstones.MOD_ID + ":rose_quartz"));
+
     public static final RegistryObject<EntityType<Strawberry>> STRAWBERRY = ENTITIES.register("strawberry",
             () -> EntityType.Builder.of(Strawberry::new, MobCategory.CREATURE)
                     .sized(0.5F, 1.5F).clientTrackingRange(8)
@@ -59,6 +64,7 @@ public class ModEntities {
     }
 
     private static void registerAttributes(EntityAttributeCreationEvent event) {
+        event.put(ROSE_QUARTZ.get(), RoseQuartz.createAttributes().build());
         event.put(RUBY.get(), Ruby.createAttributes().build());
         event.put(JASPER.get(), Jasper.createAttributes().build());
         event.put(CARNELIAN.get(), Carnelian.createAttributes().build());

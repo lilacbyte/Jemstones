@@ -96,3 +96,10 @@ shared owners can use staffs, leads and contracts, and gems follow the nearest
 available owner. joint ownership is saved and synced to clients; primary transfers
 retain shared owners. release and autonomy clear shared permissions so they cannot
 return after retaming. faction and squad ownership remain deferred.
+
+rose quartz uses the original quartz model and textures with one fixed appearance,
+150 health, 8 attack damage and the shared gem ownership and summoning behavior.
+owner interactions convert one poisonous potato to potato, rotten flesh to leather,
+or wheat to bread, dropping the result as in KAGIC. creative inputs are preserved.
+healing, slow falling, cracked gem repair, rose tears, pepo creation, variants and
+fusion remain deferred; upstream voice files are unavailable.
