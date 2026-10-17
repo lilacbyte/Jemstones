@@ -19,7 +19,7 @@ import java.util.UUID;
 
 public class GemContractItem extends Item {
     public enum Action {
-        TRANSFER, LIBERATION, AUTONOMY
+        TRANSFER, LIBERATION, AUTONOMY, JOINT
     }
 
     private final Action action;
@@ -60,16 +60,20 @@ public class GemContractItem extends Item {
         if (!(target instanceof GemEntity gem)) return InteractionResult.PASS;
         if (player.isSpectator() || !target.isAlive() || stack.isEmpty()) return InteractionResult.FAIL;
         UUID signer = getSigner(stack);
-        if (!gem.isTame() || signer == null || !signer.equals(gem.getOwnerUUID())) {
+        if (!gem.isOwnerId(signer)) {
             if (!player.level().isClientSide) {
                 player.displayClientMessage(Component.translatable("message.jemstones.contract_wrong_owner"), true);
             }
             return InteractionResult.FAIL;
         }
         if (!player.level().isClientSide) {
-            if (action == Action.TRANSFER && player.getUUID().equals(gem.getOwnerUUID())) return InteractionResult.CONSUME;
+            if ((action == Action.TRANSFER || action == Action.JOINT) && gem.isOwnedBy(player)) {
+                return InteractionResult.CONSUME;
+            }
             if (action == Action.AUTONOMY) {
                 gem.grantAutonomy();
+            } else if (action == Action.JOINT) {
+                gem.addJointOwner(player.getUUID());
             } else {
                 gem.setOwnerUUID(action == Action.LIBERATION ? null : player.getUUID());
                 gem.setTame(action == Action.TRANSFER);
@@ -82,6 +86,7 @@ public class GemContractItem extends Item {
                 case TRANSFER -> "message.jemstones.gem_transferred";
                 case LIBERATION -> "message.jemstones.gem_released";
                 case AUTONOMY -> "message.jemstones.gem_autonomous";
+                case JOINT -> "message.jemstones.gem_shared";
             };
             player.displayClientMessage(Component.translatable(message, gem.getName()), true);
         }

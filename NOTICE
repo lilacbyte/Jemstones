@@ -73,7 +73,7 @@ the decorative beam renderer remains deferred.
 commander staff retains its original texture, recipe, binding and signed name.
 gems recognize the main-hand bearer of their owner's staff for attack protection
 and owner-authorized leashing without changing their saved owner.
-squad commands and joint-owner authority remain deferred.
+squad commands remain deferred.
 
 inactive gem base crafting retains the original pattern and ingredient list.
 the 54 named ore-dictionary gem choices map to optional forge:gems item tags
@@ -89,4 +89,10 @@ follow/stay commands and gem-led squads remain deferred.
 autonomy contracts retain the original texture, recipe and signing behavior.
 owner-signed contracts make ported gems serve themselves: no player owner,
 no owner following and no staff retaming, including after saving and loading.
-joint-owner and faction servitude systems remain deferred.
+faction servitude systems remain deferred.
+
+joint ownership contracts retain the original texture, recipe and signing behavior.
+shared owners can use staffs, leads and contracts, and gems follow the nearest
+available owner. joint ownership is saved and synced to clients; primary transfers
+retain shared owners. release and autonomy clear shared permissions so they cannot
+return after retaming. faction and squad ownership remain deferred.

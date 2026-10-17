@@ -108,6 +108,9 @@ public class ModItems {
     public static final RegistryObject<Item> LIBERATION_CONTRACT = ITEMS.register("liberation_contract",
             () -> new GemContractItem(new Item.Properties().stacksTo(1), GemContractItem.Action.LIBERATION));
 
+    public static final RegistryObject<Item> JOINT_CONTRACT = ITEMS.register("joint_contract",
+            () -> new GemContractItem(new Item.Properties().stacksTo(1), GemContractItem.Action.JOINT));
+
     public static final RegistryObject<Item> AUTONOMY_CONTRACT = ITEMS.register("autonomy_contract",
             () -> new GemContractItem(new Item.Properties().stacksTo(1), GemContractItem.Action.AUTONOMY));
 

@@ -24,6 +24,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.TRANSFER_CONTRACT.get());
                         output.accept(ModItems.LIBERATION_CONTRACT.get());
                         output.accept(ModItems.AUTONOMY_CONTRACT.get());
+                        output.accept(ModItems.JOINT_CONTRACT.get());
                         output.accept(ModItems.STRAWBERRY_SLICE.get());
                         output.accept(ModItems.STRAWBERRY_SEEDS.get());
                         output.accept(ModItems.GIANT_STRAWBERRY.get());

@@ -24,6 +24,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.TRANSFER_CONTRACT);
         simpleItem(ModItems.LIBERATION_CONTRACT);
         simpleItem(ModItems.AUTONOMY_CONTRACT);
+        simpleItem(ModItems.JOINT_CONTRACT);
         simpleItem(ModItems.STRAWBERRY_SLICE);
         simpleItem(ModItems.STRAWBERRY_SEEDS);
         simpleItem(ModItems.JASPER_GEM);

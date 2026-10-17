@@ -24,6 +24,9 @@ public class ModRecipeProvider extends RecipeProvider {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.AUTONOMY_CONTRACT.get())
                 .requires(ModItems.LIBERATION_CONTRACT.get()).requires(Items.REDSTONE)
                 .unlockedBy("has_liberation_contract", has(ModItems.LIBERATION_CONTRACT.get())).save(output);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.JOINT_CONTRACT.get())
+                .requires(ModItems.TRANSFER_CONTRACT.get()).requires(Items.STRING)
+                .unlockedBy("has_transfer_contract", has(ModItems.TRANSFER_CONTRACT.get())).save(output);
         var baseGems = ItemTags.create(new ResourceLocation("jemstones", "inactive_gem_base_gems"));
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.INACTIVE_GEM_BASE.get())
                 .pattern("psp").pattern("grg").pattern("pep")

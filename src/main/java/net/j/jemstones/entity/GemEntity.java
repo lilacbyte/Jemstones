@@ -4,6 +4,9 @@ import net.j.jemstones.item.CommanderStaffItem;
 import net.j.jemstones.item.ModItems;
 import net.minecraft.network.chat.Component;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.server.level.ServerLevel;
@@ -23,13 +26,55 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.UUID;
+
 public abstract class GemEntity extends TamableAnimal {
+    private static final EntityDataAccessor<CompoundTag> JOINT_OWNERS =
+            SynchedEntityData.defineId(GemEntity.class, EntityDataSerializers.COMPOUND_TAG);
     private boolean peaceful;
     private boolean autonomous;
 
     protected GemEntity(EntityType<? extends GemEntity> type, Level level) {
         super(type, level);
         setPersistenceRequired();
+    }
+
+    @Override
+    protected void defineSynchedData() {
+        super.defineSynchedData();
+        entityData.define(JOINT_OWNERS, new CompoundTag());
+    }
+
+    public boolean isOwnerId(@Nullable UUID owner) {
+        return owner != null && isTame() && getOwnerUUID() != null
+                && (owner.equals(getOwnerUUID()) || entityData.get(JOINT_OWNERS).getBoolean(owner.toString()));
+    }
+
+    public void addJointOwner(UUID owner) {
+        if (!isTame() || getOwnerUUID() == null || isOwnerId(owner)) return;
+        CompoundTag owners = entityData.get(JOINT_OWNERS).copy();
+        owners.putBoolean(owner.toString(), true);
+        entityData.set(JOINT_OWNERS, owners);
+    }
+
+    @Override
+    public void setOwnerUUID(@Nullable UUID owner) {
+        super.setOwnerUUID(owner);
+        if (owner == null) entityData.set(JOINT_OWNERS, new CompoundTag());
+    }
+
+    @Nullable
+    @Override
+    public LivingEntity getOwner() {
+        Player nearest = null;
+        double distance = Double.MAX_VALUE;
+        for (Player player : level().players()) {
+            if (isOwnerId(player.getUUID()) && distanceToSqr(player) < distance) {
+                nearest = player;
+                distance = distanceToSqr(player);
+            }
+        }
+        return nearest;
     }
 
     protected static AttributeSupplier.Builder createGemAttributes(double health, double damage) {
@@ -60,10 +105,10 @@ public abstract class GemEntity extends TamableAnimal {
     @Override
     public boolean isOwnedBy(LivingEntity entity) {
         if (entity == null || !isTame() || getOwnerUUID() == null) return false;
-        if (entity instanceof Player && getOwnerUUID().equals(entity.getUUID())) return true;
+        if (entity instanceof Player && isOwnerId(entity.getUUID())) return true;
         ItemStack stack = entity.getMainHandItem();
         return stack.getItem() instanceof CommanderStaffItem staff
-                && getOwnerUUID().equals(staff.getOwner(stack));
+                && isOwnerId(staff.getOwner(stack));
     }
 
     @Override
@@ -118,11 +163,13 @@ public abstract class GemEntity extends TamableAnimal {
     public void addAdditionalSaveData(CompoundTag tag) {
         super.addAdditionalSaveData(tag);
         tag.putBoolean("Autonomous", autonomous);
+        tag.put("JointOwners", entityData.get(JOINT_OWNERS).copy());
     }
 
     @Override
     public void readAdditionalSaveData(CompoundTag tag) {
         super.readAdditionalSaveData(tag);
+        entityData.set(JOINT_OWNERS, getOwnerUUID() == null ? new CompoundTag() : tag.getCompound("JointOwners").copy());
         autonomous = tag.getBoolean("Autonomous");
         if (autonomous) grantAutonomy();
     }
@@ -155,8 +202,7 @@ public abstract class GemEntity extends TamableAnimal {
     @Override
     public boolean canAttack(LivingEntity target) {
         if (isOwnedBy(target)) return false;
-        if (target instanceof TamableAnimal animal && getOwnerUUID() != null
-                && getOwnerUUID().equals(animal.getOwnerUUID())) return false;
+        if (target instanceof TamableAnimal animal && isOwnerId(animal.getOwnerUUID())) return false;
         return super.canAttack(target);
     }
 
