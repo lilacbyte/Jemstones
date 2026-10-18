@@ -63,6 +63,12 @@ public class ModItems {
     public static final RegistryObject<Item> ROSE_QUARTZ_GEM = ITEMS.register("rose_quartz_gem",
             () -> new QuartzGemItem(ModEntities.ROSE_QUARTZ, new Item.Properties().stacksTo(1)));
 
+    public static final RegistryObject<Item> CRACKED_RUBY_GEM = ITEMS.register("cracked_ruby_gem",
+            () -> new CrackedGemItem(RUBY_GEM, new Item.Properties().stacksTo(1)));
+
+    public static final RegistryObject<Item> CRACKED_ROSE_QUARTZ_GEM = ITEMS.register("cracked_rose_quartz_gem",
+            () -> new CrackedGemItem(ROSE_QUARTZ_GEM, new Item.Properties().stacksTo(1)));
+
     public static final RegistryObject<Item> JASPER_GEM = ITEMS.register("jasper_gem",
             () -> new QuartzGemItem(ModEntities.JASPER, new Item.Properties().stacksTo(1)));
 

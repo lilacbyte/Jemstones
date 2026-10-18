@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "jemstones:item/cracked_rose_quartz_gem"
+  }
+}

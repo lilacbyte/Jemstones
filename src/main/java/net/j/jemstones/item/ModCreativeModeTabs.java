@@ -34,6 +34,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.JASPER_GEM.get());
                         output.accept(ModItems.CARNELIAN_GEM.get());
                         output.accept(ModItems.ROSE_QUARTZ_GEM.get());
+                        output.accept(ModItems.CRACKED_RUBY_GEM.get());
+                        output.accept(ModItems.CRACKED_ROSE_QUARTZ_GEM.get());
                         output.accept(ModItems.AMETHYST_GEM.get());
                         output.accept(ModItems.MELON_SPAWN_EGG.get());
                         output.accept(ModItems.STRAWBERRY_SPAWN_EGG.get());

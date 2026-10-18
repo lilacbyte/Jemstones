@@ -1,5 +1,6 @@
 package net.j.jemstones.entity;
 
+import net.j.jemstones.item.CrackedGemItem;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.EntityType;
@@ -29,13 +30,16 @@ public class RoseQuartz extends QuartzGem {
     @Override
     public InteractionResult mobInteract(Player player, InteractionHand hand) {
         ItemStack stack = player.getItemInHand(hand);
-        Item result = RECIPES.get(stack.getItem());
+        boolean repairing = stack.getItem() instanceof CrackedGemItem;
+        Item result = repairing ? ((CrackedGemItem) stack.getItem()).getRepairedItem() : RECIPES.get(stack.getItem());
         if (hand != InteractionHand.MAIN_HAND || result == null) return super.mobInteract(player, hand);
         if (player.isSpectator() || !isAlive() || stack.isEmpty() || !isOwnedBy(player)) {
             return InteractionResult.FAIL;
         }
         if (!level().isClientSide) {
-            if (spawnAtLocation(new ItemStack(result), 1.0F) == null) return InteractionResult.FAIL;
+            ItemStack output = new ItemStack(result);
+            if (repairing && stack.hasTag()) output.setTag(stack.getTag().copy());
+            if (spawnAtLocation(output, 1.0F) == null) return InteractionResult.FAIL;
             if (!player.getAbilities().instabuild) stack.shrink(1);
         }
         return InteractionResult.sidedSuccess(level().isClientSide);

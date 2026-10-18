@@ -101,5 +101,10 @@ rose quartz uses the original quartz model and textures with one fixed appearanc
 150 health, 8 attack damage and the shared gem ownership and summoning behavior.
 owner interactions convert one poisonous potato to potato, rotten flesh to leather,
 or wheat to bread, dropping the result as in KAGIC. creative inputs are preserved.
-healing, slow falling, cracked gem repair, rose tears, pepo creation, variants and
+healing, slow falling, rose tears, pepo creation, variants and
 fusion remain deferred; upstream voice files are unavailable.
+
+cracked ruby and rose quartz gems retain their original textures and cannot summon.
+rose quartz repairs them for owners through main-hand interaction, dropping one
+intact gem with a copy of its saved item data. creative inputs are preserved.
+cracked gem drops, reform timers and full entity restoration remain deferred.
