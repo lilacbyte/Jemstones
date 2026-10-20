@@ -101,11 +101,16 @@ rose quartz uses the original quartz model and textures with one fixed appearanc
 150 health, 8 attack damage and the shared gem ownership and summoning behavior.
 owner interactions convert one poisonous potato to potato, rotten flesh to leather,
 or wheat to bread, dropping the result as in KAGIC. creative inputs are preserved.
-healing, slow falling, rose tears, pepo creation, variants and
-fusion remain deferred; upstream voice files are unavailable.
+rose tears, pepo creation, variants and fusion remain deferred; upstream voice files are unavailable.
 
 cracked ruby, rose quartz, amethyst, carnelian and jasper gems retain their original
 textures and cannot summon.
 rose quartz repairs them for owners through main-hand interaction, dropping one
 intact gem with a copy of its saved item data. creative inputs are preserved.
 cracked gem drops, reform timers and full entity restoration remain deferred.
+
+rose quartz restores the original regeneration pulse (100 ticks at amplifier 0,
+first pulse on living update 82, then every 81) and halves downward motion.
+healing covers the original 16-block horizontal expansion and world-height vertical
+range. owners, shared-owner gems and matching wild or autonomous gems qualify;
+faction-based healing remains deferred with the faction system.
