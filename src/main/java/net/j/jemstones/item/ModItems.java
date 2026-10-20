@@ -72,6 +72,15 @@ public class ModItems {
     public static final RegistryObject<Item> JASPER_GEM = ITEMS.register("jasper_gem",
             () -> new QuartzGemItem(ModEntities.JASPER, new Item.Properties().stacksTo(1)));
 
+    public static final RegistryObject<Item> CRACKED_AMETHYST_GEM = ITEMS.register("cracked_amethyst_gem",
+            () -> new CrackedGemItem(AMETHYST_GEM, new Item.Properties().stacksTo(1)));
+
+    public static final RegistryObject<Item> CRACKED_CARNELIAN_GEM = ITEMS.register("cracked_carnelian_gem",
+            () -> new CrackedGemItem(CARNELIAN_GEM, new Item.Properties().stacksTo(1)));
+
+    public static final RegistryObject<Item> CRACKED_JASPER_GEM = ITEMS.register("cracked_jasper_gem",
+            () -> new CrackedGemItem(JASPER_GEM, new Item.Properties().stacksTo(1)));
+
     public static final RegistryObject<Item> CHISELED_PINK_SANDSTONE = ITEMS.register("chiseled_pink_sandstone",
             () -> new BlockItem(ModBlocks.CHISELED_PINK_SANDSTONE.get(), new Item.Properties()));
 

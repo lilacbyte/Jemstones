@@ -104,7 +104,8 @@ or wheat to bread, dropping the result as in KAGIC. creative inputs are preserve
 healing, slow falling, rose tears, pepo creation, variants and
 fusion remain deferred; upstream voice files are unavailable.
 
-cracked ruby and rose quartz gems retain their original textures and cannot summon.
+cracked ruby, rose quartz, amethyst, carnelian and jasper gems retain their original
+textures and cannot summon.
 rose quartz repairs them for owners through main-hand interaction, dropping one
 intact gem with a copy of its saved item data. creative inputs are preserved.
 cracked gem drops, reform timers and full entity restoration remain deferred.

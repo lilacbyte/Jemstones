@@ -32,6 +32,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.ROSE_QUARTZ_GEM);
         simpleItem(ModItems.CRACKED_RUBY_GEM);
         simpleItem(ModItems.CRACKED_ROSE_QUARTZ_GEM);
+        simpleItem(ModItems.CRACKED_AMETHYST_GEM);
+        simpleItem(ModItems.CRACKED_CARNELIAN_GEM);
+        simpleItem(ModItems.CRACKED_JASPER_GEM);
         simpleItem(ModItems.AMETHYST_GEM);
         withExistingParent("melon_spawn_egg", mcLoc("item/template_spawn_egg"));
         withExistingParent("strawberry_spawn_egg", mcLoc("item/template_spawn_egg"));
