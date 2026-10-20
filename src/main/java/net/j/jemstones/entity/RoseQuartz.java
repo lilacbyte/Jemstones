@@ -1,6 +1,7 @@
 package net.j.jemstones.entity;
 
 import net.j.jemstones.item.CrackedGemItem;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.EntityType;
@@ -30,6 +31,18 @@ public class RoseQuartz extends QuartzGem {
 
     public static AttributeSupplier.Builder createAttributes() {
         return createQuartzAttributes(8.0D);
+    }
+
+    @Override
+    public boolean hurt(DamageSource source, float amount) {
+        boolean hurt = super.hurt(source, amount);
+        if (hurt && !level().isClientSide) {
+            for (Pepo pepo : level().getEntitiesOfClass(Pepo.class,
+                    getBoundingBox().inflate(16.0D, 4.0D, 16.0D), Pepo::isAlive)) {
+                if (!pepo.hasMaster()) pepo.setMaster(this);
+            }
+        }
+        return hurt;
     }
 
     @Override

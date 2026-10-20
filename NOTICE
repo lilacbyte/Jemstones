@@ -15,7 +15,7 @@ Ruby voice sounds are unavailable in the upstream checkout used for this port.
 "Steven Universe" and all related characters and elements are trademarks of Cartoon Network.
 
 Melon and Pumpkin use the original Pepo model, attributes and basic combat with spawn eggs.
-Rose Quartz following is deferred. Upstream Pepo voice files are unavailable.
+Rose Quartz following is supported for bound pepos. Upstream Pepo voice files are unavailable.
 Pumpkin supports torch toggling, saved lighting and matching drops. Automatic
 Halloween lighting is deferred.
 
@@ -114,3 +114,9 @@ first pulse on living update 82, then every 81) and halves downward motion.
 healing covers the original 16-block horizontal expansion and world-height vertical
 range. owners, shared-owner gems and matching wild or autonomous gems qualify;
 faction-based healing remains deferred with the faction system.
+
+rose quartz recruits nearby unclaimed pepos after accepted damage within the
+original 16 x 4 x 16 expanded bounds. pepos follow her and target her attacker.
+the master UUID is persisted; an unloaded master does not make a pepo claimable.
+block-to-pepo creation remains deferred. unlike upstream, rejected hits do not
+recruit pepos, preserving the gem staff's protection.
