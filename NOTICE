@@ -118,5 +118,13 @@ faction-based healing remains deferred with the faction system.
 rose quartz recruits nearby unclaimed pepos after accepted damage within the
 original 16 x 4 x 16 expanded bounds. pepos follow her and target her attacker.
 the master UUID is persisted; an unloaded master does not make a pepo claimable.
-block-to-pepo creation remains deferred. unlike upstream, rejected hits do not
-recruit pepos, preserving the gem staff's protection.
+unlike upstream, rejected hits do not recruit pepos, preserving the gem staff's
+protection.
+
+rose quartz awakens melon, pumpkin, carved pumpkin and jack o'lantern blocks after
+accepted nonlethal damage, using the original 8 x 2 x 8 search and movement gate
+(more than four blocks since the previous accepted hit). jack o'lanterns produce
+lit pumpkins. new pepos bind to her, and converted blocks drop no items.
+this port respects the Forge mob griefing hook, avoids loading extra chunks and
+keeps blocks when spawning is cancelled. cactus and strawberry awakening remain
+deferred. surge position remains transient as in KAGIC.

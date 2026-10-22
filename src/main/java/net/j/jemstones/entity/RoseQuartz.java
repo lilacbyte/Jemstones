@@ -1,6 +1,7 @@
 package net.j.jemstones.entity;
 
 import net.j.jemstones.item.CrackedGemItem;
+import net.minecraft.core.BlockPos;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -15,11 +16,14 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.event.ForgeEventFactory;
 
 import java.util.Map;
 
 public class RoseQuartz extends QuartzGem {
     private int regenerationTicks;
+    private BlockPos lastSurgeLocation;
     private static final Map<Item, Item> RECIPES = Map.of(
             Items.POISONOUS_POTATO, Items.POTATO,
             Items.ROTTEN_FLESH, Items.LEATHER,
@@ -37,12 +41,43 @@ public class RoseQuartz extends QuartzGem {
     public boolean hurt(DamageSource source, float amount) {
         boolean hurt = super.hurt(source, amount);
         if (hurt && !level().isClientSide) {
+            if (isAlive()) awakenPepos();
             for (Pepo pepo : level().getEntitiesOfClass(Pepo.class,
                     getBoundingBox().inflate(16.0D, 4.0D, 16.0D), Pepo::isAlive)) {
                 if (!pepo.hasMaster()) pepo.setMaster(this);
             }
         }
         return hurt;
+    }
+
+    private void awakenPepos() {
+        BlockPos origin = blockPosition();
+        boolean moved = lastSurgeLocation == null || origin.distSqr(lastSurgeLocation) > 16;
+        lastSurgeLocation = origin;
+        if (!moved || !ForgeEventFactory.getMobGriefingEvent(level(), this)) return;
+        for (BlockPos pos : BlockPos.betweenClosed(origin.offset(-8, -2, -8), origin.offset(8, 2, 8))) {
+            if (!level().hasChunkAt(pos)) continue;
+            var state = level().getBlockState(pos);
+            Pepo pepo;
+            if (state.is(Blocks.MELON)) {
+                pepo = ModEntities.MELON.get().create(level());
+            } else if (state.is(Blocks.PUMPKIN) || state.is(Blocks.CARVED_PUMPKIN)
+                    || state.is(Blocks.JACK_O_LANTERN)) {
+                Pumpkin pumpkin = ModEntities.PUMPKIN.get().create(level());
+                if (pumpkin == null) continue;
+                pumpkin.setLit(state.is(Blocks.JACK_O_LANTERN));
+                pepo = pumpkin;
+            } else {
+                continue;
+            }
+            if (pepo == null) continue;
+            pepo.setPos(pos.getX() + 0.5D, pos.getY(), pos.getZ() + 0.5D);
+            pepo.setHealth(pepo.getMaxHealth());
+            pepo.setMaster(this);
+            if (level().addFreshEntity(pepo) && !level().destroyBlock(pos, false, this)) {
+                pepo.discard();
+            }
+        }
     }
 
     @Override
